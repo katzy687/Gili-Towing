@@ -4,8 +4,7 @@ import truckImg from '../assets/gili-truck.jpg';
 
 const IndexPage = () => (
   <div>
-    <h1>Hi Fuckers, my name is Gili</h1>
-    <p>I love cars and blond hoes.</p>
+    <h1>Hi, my name is Gili</h1>
     <div className="truck-wrapper" style={{ textAlign: "center" }}>
       <img src={truckImg} alt="truck" />
     </div>

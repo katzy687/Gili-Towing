@@ -6,7 +6,6 @@ const IndexPage = () => (
   <div>
     <h1>מה קורא???</h1>
     <p>ברוך הבא לאתר שלי. קורא'ם לי גילי</p>
-    <p>אני חולה על מכוניות וזונות</p>
     <div className="truck-wrapper" style={{ textAlign: "center" }}>
       <img src={truckImg} alt="truck" />
     </div>
