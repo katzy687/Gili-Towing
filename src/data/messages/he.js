@@ -1,3 +1,3 @@
 module.exports = {
-  'selectLanguage': 'שלום חבר, תבחר שפה כבר'
+  'selectLanguage': 'תבחר שפה'
 };

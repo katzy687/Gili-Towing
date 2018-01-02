@@ -1,0 +1,62 @@
+.HeaderContent {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 960;
+  padding: 0rem 1rem 1rem;
+}
+
+.HeaderContent p {
+  margin: 0;
+  color: white;
+  font-size: 0.6rem;
+}
+
+
+.SiteTitle {
+  margin-bottom: 0.5rem;
+}
+
+.SiteTitle h1 {
+  margin: 0 0 0.1rem;
+  font-size: 1.5rem;
+}
+
+.SiteTitle p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.Gili {
+  font-style: italic;
+  
+}
+
+.CallToAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.CallToAction>p {
+  font-size: 0.8em;
+  color: white;
+  margin: 0;
+}
+
+.CallToAction>p>span {
+  font-style: italic;
+}
+
+.Phone {
+  background: #4CAF50;
+  border-radius: 5px;
+  /* width: 30%; */
+  margin: 0;
+  font-family: monospace;
+}
+
+.Phone span {
+  padding: 0.5rem;
+}
+

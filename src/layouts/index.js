@@ -16,8 +16,8 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
   const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
 
   // const langAlign = langKey === 'he' ? 'right' : 'left';
-  const langDir = langKey === 'he' ? 'rtl' : 'ltr';
-  const langTitle = langKey === 'he' ? 'גרר גילי' : 'Gili\'s Towing';
+  const langDirection = langKey === 'he' ? 'rtl' : 'ltr';
+  const langTitle = langKey === 'he' ? 'גרר גילי' : 'Gili\'s Towing 24/7';
 
   return (
     <IntlProvider
@@ -26,15 +26,16 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
     >
       <div>
         <Helmet
-          title="Gatsby Default Starter"
+          title="Gili's Towing 24/7"
           meta={[
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
+          link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"
         />
-        <Header langs={langsMenu} title={langTitle}/>
+        <Header langs={langsMenu} title={langTitle} langKey={langKey}/>
         <div
-          dir={langDir}
+          dir={langDirection}
           style={{
             margin: '0 auto',
             maxWidth: 960,
