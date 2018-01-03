@@ -1,0 +1,82 @@
+@import "../layouts/variables.css";
+
+.GridContainer {
+  display: grid;
+  /* grid-gap: 1.45rem; */
+  grid-template-columns: 1rem 1fr 1rem;
+  grid-template-areas: 
+    "nav nav nav"
+    "crsl crsl crsl"
+    ". desc ."
+    "map map map"
+    ". srvc ."
+}
+
+.navContainer {
+  grid-area: nav;
+}
+
+.navContainer ul {
+  display: flex;
+  height: 12vh;
+  /* justify-content: space-around; */
+  align-items: center;
+  align-content: center;
+  line-height: 1rem;
+  padding: 0;
+}
+
+.navContainer ul li {
+  border: solid black 2px;
+  background: #1E88E5;
+  color: white;
+  padding: 0;
+  margin: auto;
+  width: 33.333%;
+  height: 100%;
+  text-align: center;
+  font-size: 0.7rem;
+  /* flex the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Carousel {
+  grid-area: crsl;
+}
+
+.Description {
+  grid-area: desc;
+  margin-top: 1rem;
+}
+
+.MapTracker {
+  grid-area: map;
+  background: var(--secondary-color);
+
+}
+
+.MapTracker p {
+  padding: 1rem;
+  color: white;
+}
+
+.MapTracker .mapContainer {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ServiceContainer {
+  grid-area: srvc;
+}
+
+.ServiceContainer h3 {
+  margin-top: 1rem;
+}
+
+
+

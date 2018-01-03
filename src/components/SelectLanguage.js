@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import { FormattedMessage } from 'react-intl';
+import FlagIcon from './FlagIcon.js';
 
 const SelectLanguage = (props) => {
   const links = props.langs.map((lang, i, langArr) => {
@@ -13,8 +14,8 @@ const SelectLanguage = (props) => {
         color: 'white',
         paddingLeft
       }}>
-        <li selected={lang.selected}>
-          {lang.langKey === 'en' ? 'English' : 'עברית'}
+        <li selected={lang.selected} style={{ marginBottom: '0.5rem'}} >
+          {lang.langKey === 'en' ? <FlagIcon code="us" /> : <FlagIcon code="il" /> }
         </li>
       </Link>
     )

@@ -14,5 +14,6 @@ module.exports = {
         langKeyDefault: languages.defaultLangKey,
         useLangKeyLayout: true
       }
-    }],
+    }
+  ]
 }

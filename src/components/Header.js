@@ -25,12 +25,14 @@ const SiteTitle = (props) => {
   );
 }
 
-const PhoneButton = () => (
+const PhoneButton = () => {
+  const gilisNumber = '+1 (303) 499-7111';
+  return(
     <button className={styles.Phone} >
       <FaPhone />
-      <span>058-555-5555</span>
+      <a style={{color: 'black'}} href={`tel:${gilisNumber}`}>{gilisNumber}</a>
     </button>
-);
+)};
 
 // location needs to be made dynamic
 const CallToAction = () => (
@@ -45,7 +47,7 @@ const Header = (props) => (
   <div
     style={{
       background: 'rebeccapurple',
-      marginBottom: '1.45rem',
+      // marginBottom: '1.45rem',
     }}
   >
     <SelectLanguage langs={props.langs} />

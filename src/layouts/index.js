@@ -31,7 +31,6 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
-          link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"
         />
         <Header langs={langsMenu} title={langTitle} langKey={langKey}/>
         <div
@@ -39,9 +38,7 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
           style={{
             margin: '0 auto',
             maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0
-            // ,textAlign: langAlign
+            // padding: '0px 1.0875rem 1.45rem',
           }}
         >
           {children()}
