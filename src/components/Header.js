@@ -3,6 +3,16 @@ import Link from 'gatsby-link'
 import SelectLanguage from './SelectLanguage';
 import styles from './header.module.css';
 import FaPhone from 'react-icons/lib/fa/phone';
+import MdMenuIcon from 'react-icons/lib/md/menu';
+
+
+const SideBarTrigger = (props) => (
+  <div style={{color: 'white', padding: '1rem', fontSize: '2rem'}} 
+       onClick={props.clicked}
+  >
+    <MdMenuIcon />
+  </div>
+);
 
 const SiteTitle = (props) => {
   const styledTitle = props.langKey === "en" ?
@@ -50,6 +60,7 @@ const Header = (props) => (
       // marginBottom: '1.45rem',
     }}
   >
+    <SideBarTrigger clicked={props.sideBarTriggerClicked} />
     <SelectLanguage langs={props.langs} />
     <div className={styles.HeaderContent}>
       <SiteTitle title={props.title} langKey={props.langKey} />
