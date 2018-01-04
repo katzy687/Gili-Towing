@@ -6,6 +6,8 @@ import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider } from 'react-intl';
 import 'intl';
 import './index.css'
+import styles from './index.module.css';
+import Sidebar from 'react-sidebar';
 
 const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
   const url = location.pathname;
@@ -18,6 +20,7 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
   // const langAlign = langKey === 'he' ? 'right' : 'left';
   const langDirection = langKey === 'he' ? 'rtl' : 'ltr';
   const langTitle = langKey === 'he' ? 'גרר גילי' : 'Gili\'s Towing 24/7';
+  const sideBarContent = <b> Sidebar content bitchh </b>;
 
   return (
     <IntlProvider
@@ -32,17 +35,19 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <Header langs={langsMenu} title={langTitle} langKey={langKey}/>
-        <div
-          dir={langDirection}
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            // padding: '0px 1.0875rem 1.45rem',
-          }}
-        >
-          {children()}
-        </div>
+        <Sidebar sidebar={sideBarContent} open={true} sidebarClassName={styles.sideBar} contentClassName={styles.sideBarContent} >
+          <Header langs={langsMenu} title={langTitle} langKey={langKey} />
+          <div
+            dir={langDirection}
+            style={{
+              margin: '0 auto',
+              maxWidth: 960,
+              // padding: '0px 1.0875rem 1.45rem',
+            }}
+          >
+            {children()}
+          </div>
+        </Sidebar>
       </div>
     </IntlProvider>
   );

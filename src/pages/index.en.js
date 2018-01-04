@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { Carousel } from 'react-responsive-carousel';
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
-import homeStyles from './index.module.css';
+import carouselStyles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+import styles from './index.module.css';
 
 // images
 import truckImg from '../assets/gili-truck.jpg';
@@ -10,18 +10,18 @@ import truckDesert from '../assets/truck-desert.jpg';
 import desertImg from '../assets/desert.jpg';
 import aradImg from '../assets/arad.jpg';
 
-const HomeButtons = () => (
-  <nav className={homeStyles.navContainer} >
-    <ul>
-      <li><p>Towing / Roadside Assistance</p></li>
-      <li><p>Batteries</p></li>
-      <li><p>Metal Scrapping</p></li>
-    </ul>
-  </nav>
-);
+// const HomeButtons = () => (
+//   <nav className={styles.navContainer} >
+//     <ul>
+//       <li><p>Towing / Roadside Assistance</p></li>
+//       <li><p>Batteries</p></li>
+//       <li><p>Metal Scrapping</p></li>
+//     </ul>
+//   </nav>
+// );
 
 const MainSlider = () => (
-  <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} className={homeStyles.Carousel} >
+  <Carousel showThumbs={false} infiniteLoop={true} autoPlay={true} className={styles.Carousel} >
     <div>
       <img src={truckDesert} />
       {/* <p className="legend">Legend 1</p> */}
@@ -39,7 +39,7 @@ const MainSlider = () => (
 
 
 const Description = () => (
-  <section className={homeStyles.Description} >
+  <section className={[styles.Description, styles.mobileContainer].join(' ')} >
     <h3>Hi, my name is Gili</h3>
     <p>Car broke down? Stuck in some mud up north? Trapped in the airport garage? Well I'm here to fix your day.</p>
     <p>No matter the vehicle, weather or time of day, I'll come get you. Just give me a call.</p>
@@ -49,16 +49,16 @@ const Description = () => (
 )
 
 const MapTracker = () => (
-  <section className={homeStyles.MapTracker} >
+  <section className={styles.MapTracker} >
     <p>Hi, I'm currently in: <span style={{fontStyle: 'italic'}} >Petach Tikvah</span></p>
-    <div className={homeStyles.mapContainer}>
+    <div className={styles.mapContainer}>
       <div>map goes here</div>
     </div>
   </section>
 )
 
 const ServiceList = () => (
-  <section className={homeStyles.ServiceContainer} >
+  <section className={[styles.ServiceContainer, styles.mobileContainer].join(' ')} >
     <h3>I offer the following services</h3>
     <ul>
       <li>towing</li>
@@ -68,12 +68,9 @@ const ServiceList = () => (
 )
 
 
-
-
-
 const IndexPage = () => (
-  <main className={homeStyles.GridContainer} >
-    <HomeButtons />
+  <main >
+    {/* <HomeButtons /> */}
     <MainSlider />
     <Description />
     <MapTracker />
