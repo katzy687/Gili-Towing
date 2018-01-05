@@ -8,8 +8,10 @@ import 'intl';
 import './index.css'
 import styles from './index.module.css';
 import Sidebar from 'react-sidebar';
+import SideBarContent from '../components/SideBarContent';
 
 class TemplateWrapper extends Component {
+  // props are data, location, i18nMessages, children
   constructor(props) {
     super(props);
  
@@ -31,17 +33,17 @@ class TemplateWrapper extends Component {
   render() {
 
     const url = this.props.location.pathname;
+    console.log('url', url);
     const { langs, defaultLangKey } = this.props.data.site.siteMetadata.languages;
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-    console.log(langKey);
+    console.log('langKey', langKey);
     const homeLink = `/${langKey}/`;
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
   
     // const langAlign = langKey === 'he' ? 'right' : 'left';
     const langDirection = langKey === 'he' ? 'rtl' : 'ltr';
     const langTitle = langKey === 'he' ? 'גרר גילי' : 'Gili\'s Towing 24/7';
-    const sideBarContent = <b> Sidebar content bitchh </b>;
-  
+    
     return (
       <IntlProvider
         locale={langKey}
@@ -55,7 +57,7 @@ class TemplateWrapper extends Component {
               { name: 'keywords', content: 'sample, something' },
             ]}
           />
-          <Sidebar sidebar={sideBarContent}
+          <Sidebar sidebar={<SideBarContent langKey={langKey} />}
                    open={this.state.sidebarOpen}
                    sidebarClassName={styles.sideBar} 
                    contentClassName={styles.sideBarContent} 

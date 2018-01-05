@@ -40,11 +40,11 @@ const MainSlider = () => (
 
 const Description = () => (
   <section className={[styles.Description, styles.mobileContainer].join(' ')} >
-    <h3>Hi, my name is Gili</h3>
-    <p>Car broke down? Stuck in some mud up north? Trapped in the airport garage? Well I'm here to fix your day.</p>
-    <p>No matter the vehicle, weather or time of day, I'll come get you. Just give me a call.</p>
-    <p>Check the map below to see how close I am to you</p>
-    <p>You can also check out my full list of <a href="">services</a></p>
+    <p>Car broke down? Stuck in some mud? </p>
+    <p> Hi, my name is Gili and I'm here to fix your day.
+       No matter the vehicle, weather or time of day, I'll come get you. Just give me a call.</p>
+    <p>Check out my full list of <a href=""> Towing Services.</a></p>
+    <p>You can also see the map below to see how close I am to you.</p>
   </section>
 )
 
@@ -57,16 +57,6 @@ const MapTracker = () => (
   </section>
 )
 
-const ServiceList = () => (
-  <section className={[styles.ServiceContainer, styles.mobileContainer].join(' ')} >
-    <h3>I offer the following services</h3>
-    <ul>
-      <li>towing</li>
-      <li>dirty sanchez</li>
-    </ul>
-  </section>
-)
-
 
 const IndexPage = () => (
   <main >
@@ -74,7 +64,6 @@ const IndexPage = () => (
     <MainSlider />
     <Description />
     <MapTracker />
-    <ServiceList />
     {/* <Link to="/en/page-2/">Go to page 2</Link> */}
   </main>
 )

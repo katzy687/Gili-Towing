@@ -1,14 +1,40 @@
-.HeaderContent {
-  margin: 0 auto;
+.HeaderContainer {
   text-align: center;
-  max-width: 960;
-  padding: 0rem 1rem 1rem;
+  background: rebeccapurple;
+  padding: 1rem;
+  /* grid stuff */
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 2.5rem;
+  justify-items: center;
+  align-items: start;
+  grid-template-areas: 
+    "hmbg title lang"
+    ". call ."
 }
 
-.HeaderContent p {
+.SideBarTrigger {
+  grid-area: hmbg;
+  display: inline-block;
+  color: white;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+.SelectLanguage {
+  grid-area: lang;
+}
+.HeaderContent {
+  grid-area: title;
+}
+.CallMeNow {
+  grid-area: call;
+  
+}
+
+
+.CallMeNow p {
   margin: 0;
   color: white;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }
 
 
@@ -60,3 +86,10 @@
   padding: 0.5rem;
 }
 
+
+@media only screen and (min-width: 768px) {
+
+  .HeaderContainer {
+    grid-template-columns: 5rem 1fr 5em;
+  }
+}
