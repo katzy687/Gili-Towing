@@ -1,8 +1,11 @@
 @import "../layouts/variables.css";
 
-.GridContainer {
+.mobileContainer {
+  padding: 0.5rem 1rem;
+}
+
+/* .GridContainer {
   display: grid;
-  /* grid-gap: 1.45rem; */
   grid-template-columns: 1rem 1fr 1rem;
   grid-template-areas: 
     "nav nav nav"
@@ -10,10 +13,10 @@
     ". desc ."
     "map map map"
     ". srvc ."
-}
+} */
 
 .navContainer {
-  grid-area: nav;
+  /* grid-area: nav; */
 }
 
 .navContainer ul {
@@ -43,16 +46,16 @@
 }
 
 .Carousel {
-  grid-area: crsl;
+  /* grid-area: crsl; */
 }
 
 .Description {
-  grid-area: desc;
+  /* grid-area: desc; */
   margin-top: 1rem;
 }
 
 .MapTracker {
-  grid-area: map;
+  /* grid-area: map; */
   background: var(--secondary-color);
 
 }
@@ -71,7 +74,7 @@
 }
 
 .ServiceContainer {
-  grid-area: srvc;
+  /* grid-area: srvc; */
 }
 
 .ServiceContainer h3 {

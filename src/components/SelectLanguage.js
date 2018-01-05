@@ -22,13 +22,8 @@ const SelectLanguage = (props) => {
   });
 
   return (
-    <section>
-      <header style={{
-        color: 'white'
-      }}>
-        {/* <FormattedMessage id="selectLanguage" /> */}
-      </header>
-      <ul style={{ display: 'flex', justifyContent: 'center', listStyle: 'none', margin: 0 }} >
+    <section className={props.className} >
+      <ul style={{ display: 'flex', justifyContent: 'center', listStyle: 'none', margin: 0, padding: '0.5rem' }} >
         {links}
       </ul>
     </section>
