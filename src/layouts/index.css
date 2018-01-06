@@ -1,4 +1,5 @@
 html {
+  background: #E0E0E0;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -615,8 +616,34 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+#tablet-call {
+  display: none;
+}
+
+.white-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 3px;
+  border: solid 1px #EEEEEE;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #tablet-call {
+    display: block;
+  }
+
+  #tablet-call a {
+    color: white;
+  }
+
+  #mobile-call {
+    display: none;
   }
 }

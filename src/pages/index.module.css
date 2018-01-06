@@ -47,16 +47,25 @@
 
 .Carousel {
   /* grid-area: crsl; */
+  max-width: 500px;
+  margin: 1rem auto;
 }
 
+
 .Description {
-  /* grid-area: desc; */
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto 0;
+  max-width: 768px;
 }
 
 .MapTracker {
   /* grid-area: map; */
   background: var(--secondary-color);
+  height: 30vh;
+  min-width: 400px;
+  margin: 1rem auto;
+  max-width: 768px;
 
 }
 
@@ -66,8 +75,7 @@
 }
 
 .MapTracker .mapContainer {
-  height: 50vh;
-  width: 100%;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,5 +89,31 @@
   margin-top: 1rem;
 }
 
+.callMe {
+  display: none;
+}
 
+@media only screen and (min-width: 768px) {
+  
+  .callMe {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
+  .checkMap {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 968px) {
+  .BottomContainer {
+    display: flex;
+  }
+
+  .Description {
+    margin-right: 1rem;
+  }
+}

@@ -9,21 +9,36 @@ import FaBattery1 from 'react-icons/lib/fa/battery-1';
 import FaTrash from 'react-icons/lib/fa/trash';
 import FaHeart from 'react-icons/lib/fa/heart';
 
-const linkItems = [
-  { name: 'Home Page', icon: <MdHome />, route: `` },
-  { name: 'Towing Services', icon: <FaAuto />, route: `towing` },
-  { name: 'Battery Replacement', icon: <FaBattery1 />, route: `battery` },
-  { name: 'Metal Scrapping', icon: <FaTrash />, route: `scrap` },
-  { name: 'Community Work', icon: <FaHeart />, route: `community` }
-];
+const getProp = (langKey, enProp, heProp) => langKey === 'en' ? enProp : heProp;
 
 const SideBarContent = (props) => {
   const langKey = props.langKey;
-  console.log(langKey);
+  const linkItems = [
+    { name: getProp(langKey, 'Home', 'דף בית'), 
+      icon: <MdHome />, 
+      route: `` 
+    },
+    { name: getProp(langKey, 'Towing Services', 'שרותי גרירה'), 
+      icon: <FaAuto />, 
+      route: `towing` 
+    },
+    { name: getProp(langKey, 'Battery Replacement', 'מצברים'), 
+      icon: <FaBattery1 />, 
+      route: `battery` 
+    },
+    { name: getProp(langKey, 'Metal Scrapping', 'גרוטאות מתכת'), 
+      icon: <FaTrash />, 
+      route: `scrap` 
+    },
+    { name: getProp(langKey, 'Community Work', 'עבודות שירות'),
+      icon: <FaHeart />, 
+      route: `community` 
+    }
+  ];
   const menuLinks = linkItems.map((item) => {
     const newPath = `/${langKey}/${item.route}`
     return (
-      <li key={item.name} >
+      <li key={item.name} onClick={props.closeHandler} >
         <Link to={newPath}>
           <span> {item.icon}  {item.name} </span>
         </Link>
@@ -33,7 +48,7 @@ const SideBarContent = (props) => {
 
   return (
     <ul >
-      <li key="close menu"><MdClose/> Close Menu</li>
+      <li key="close menu" onClick={props.closeHandler} ><MdClose /> Close Menu</li>
       {menuLinks}
     </ul>
   )

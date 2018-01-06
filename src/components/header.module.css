@@ -1,7 +1,9 @@
 .HeaderContainer {
   text-align: center;
-  background: rebeccapurple;
+  /* background: rebeccapurple; */
   padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
   /* grid stuff */
   display: grid;
   grid-template-columns: 2.5rem 1fr 2.5rem;
@@ -74,22 +76,14 @@
   font-style: italic;
 }
 
-.Phone {
-  background: #4CAF50;
-  border-radius: 5px;
-  /* width: 30%; */
-  margin: 0;
-  font-family: monospace;
-}
-
-.Phone span {
-  padding: 0.5rem;
-}
-
 
 @media only screen and (min-width: 768px) {
 
   .HeaderContainer {
     grid-template-columns: 5rem 1fr 5em;
+  }
+
+  .CallMeNow {
+    display: none;
   }
 }

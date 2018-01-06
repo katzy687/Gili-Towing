@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Helmet from 'react-helmet';
@@ -9,41 +9,44 @@ import './index.css'
 import styles from './index.module.css';
 import Sidebar from 'react-sidebar';
 import SideBarContent from '../components/SideBarContent';
+import Footer from '../components/Footer';
 
 class TemplateWrapper extends Component {
   // props are data, location, i18nMessages, children
   constructor(props) {
     super(props);
- 
+
     this.state = {
       sidebarOpen: false
     }
- 
+
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
- 
+
   onSetSidebarOpen(open) {
-    this.setState({sidebarOpen: open});
+    this.setState({ sidebarOpen: open });
   }
 
-  sideBarMenuOpen = () => {
-    this.setState( { sidebarOpen: true } );
-}
-  
+  openSideBar = () => {
+    this.setState({ sidebarOpen: true });
+  }
+
+  closeSideBar = () => {
+    this.setState({ sidebarOpen: false });
+  }
+
   render() {
 
     const url = this.props.location.pathname;
-    console.log('url', url);
     const { langs, defaultLangKey } = this.props.data.site.siteMetadata.languages;
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-    console.log('langKey', langKey);
     const homeLink = `/${langKey}/`;
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
-  
+
     // const langAlign = langKey === 'he' ? 'right' : 'left';
     const langDirection = langKey === 'he' ? 'rtl' : 'ltr';
     const langTitle = langKey === 'he' ? 'גרר גילי' : 'Gili\'s Towing 24/7';
-    
+
     return (
       <IntlProvider
         locale={langKey}
@@ -57,13 +60,14 @@ class TemplateWrapper extends Component {
               { name: 'keywords', content: 'sample, something' },
             ]}
           />
-          <Sidebar sidebar={<SideBarContent langKey={langKey} />}
-                   open={this.state.sidebarOpen}
-                   sidebarClassName={styles.sideBar} 
-                   contentClassName={styles.sideBarContent} 
-                   onSetOpen={this.onSetSidebarOpen}
+          <Sidebar sidebar={<SideBarContent langKey={langKey} closeHandler={this.closeSideBar}/>}
+            open={this.state.sidebarOpen}
+            sidebarClassName={styles.sideBar}
+            contentClassName={styles.sideBarContent}
+            onSetOpen={this.onSetSidebarOpen}
+              
           >
-            <Header langs={langsMenu} title={langTitle} langKey={langKey} sideBarTriggerClicked={this.sideBarMenuOpen}  />
+            <Header langs={langsMenu} title={langTitle} langKey={langKey} sideBarTriggerClicked={this.openSideBar} />
             <div
               dir={langDirection}
               style={{
@@ -74,6 +78,7 @@ class TemplateWrapper extends Component {
             >
               {this.props.children()}
             </div>
+            <Footer />
           </Sidebar>
         </div>
       </IntlProvider>

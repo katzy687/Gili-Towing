@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-i18n',
       options: {
@@ -14,6 +15,13 @@ module.exports = {
         langKeyDefault: languages.defaultLangKey,
         useLangKeyLayout: true
       }
-    }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
   ]
 }

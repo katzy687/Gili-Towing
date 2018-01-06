@@ -1,0 +1,15 @@
+.Phone {
+  background: #4CAF50;
+  border-radius: 5px;
+  /* width: 30%; */
+  margin: 0;
+  font-family: monospace;
+}
+
+.Phone span {
+  padding: 0.5rem;
+}
+
+.Phone a {
+  color: black;
+}
