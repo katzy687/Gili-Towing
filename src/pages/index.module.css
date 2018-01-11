@@ -49,6 +49,7 @@
   /* grid-area: crsl; */
   max-width: 500px;
   margin: 1rem auto;
+  direction: ltr;
 }
 
 
@@ -63,7 +64,8 @@
   /* grid-area: map; */
   background: var(--secondary-color);
   height: 30vh;
-  min-width: 400px;
+  /* min-width: 400px; */
+  width: 100%;
   margin: 1rem auto;
   max-width: 768px;
 
@@ -115,5 +117,9 @@
 
   .Description {
     margin-right: 1rem;
+  }
+
+  .MapTracker {
+    min-width: 400px;
   }
 }

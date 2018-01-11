@@ -16,7 +16,6 @@ const TowingPage = ({data}) => (
 
 export default TowingPage;
 
-
 export const query = graphql`
   query BlurUpQuery {
     classicCar: imageSharp(id: { regex: "/classic/" }) {

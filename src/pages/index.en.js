@@ -11,6 +11,7 @@ import truckImg from '../assets/giliTruck.jpg';
 import middleOf from '../assets/middleOfNoWhere.jpg';
 import yo from '../assets/yo.jpg';
 import gf from '../assets/girlfriend.jpg';
+import towIcon from '../assets/towtruck.svg';
 
 // const HomeButtons = () => (
 //   <nav className={styles.navContainer} >
@@ -70,7 +71,9 @@ const Description = () => (
     <p>Car broke down? Stuck in some mud? </p>
     <p> Hi, my name is Gili and I'm here to fix your day.
        No matter the vehicle, weather or time of day, I'll come get you. Just give me a call.</p>
-    <p>Check out my full list of <a href=""> Towing Services.</a></p>
+    <p>Check out the full list of 
+      <Link to="/en/towing"><span> Towing Services.</span></Link>
+    </p>
     <p className={styles.checkMap} >You can also check the map below to see how close I am to you.</p>
     <p className={styles.callMe} >Need a tow? Call Now!</p>
     <PhoneButton customId="tablet-call" customStyle={{width: '222px', margin: '0 auto', padding: '0.3rem', fontSize: '1.2rem', color: 'white'}} />
