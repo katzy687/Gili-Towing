@@ -67,7 +67,6 @@
   /* min-width: 400px; */
   width: 100%;
   margin: 1rem auto;
-  max-width: 768px;
 
 }
 
@@ -95,6 +94,18 @@
   display: none;
 }
 
+.serviceTitle {
+  border: solid 1px black;
+  padding: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.Services {
+  background: white;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
 @media only screen and (min-width: 768px) {
   
   .callMe {
@@ -111,15 +122,32 @@
 }
 
 @media only screen and (min-width: 968px) {
-  .BottomContainer {
-    display: flex;
-  }
-
-  .Description {
-    margin-right: 1rem;
+  .gridContainer {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "desc carousel"
+      "services map"
   }
 
   .MapTracker {
-    min-width: 400px;
+    grid-area: map;
+    margin: 0;
+    max-height: 30vh;
+  }
+
+  .Carousel {
+    grid-area: carousel;
+    margin-bottom: 0;
+  }
+
+  .Services {
+    grid-area: services;
+    margin: 0;
+  }
+
+  .Description {
+    grid-area: desc;
   }
 }
