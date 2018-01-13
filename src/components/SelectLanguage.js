@@ -4,32 +4,42 @@ import Link from 'gatsby-link';
 import { FormattedMessage } from 'react-intl';
 import FlagIcon from './FlagIcon.js';
 
-const EnglishSelect = () => (
-  <div>
-    <p style={{ margin: '0 0.5rem 0 0', fontSize:'0.8rem'}}>En</p>
-    <FlagIcon code="us" />
-  </div>
+const EnglishSelect = (props) => {
+  const activeFontSize = props.langSelected ? '1.1rem' : '0.7rem';
+  const activeFlagSize = props.langSelected ? '1.2rem': '1rem';
+  return (
+    <div>
+      <p style={{ margin: '0 0.5rem 0 0', fontSize: activeFontSize}}>En</p>
+      <FlagIcon code="us" />
+    </div>
+
+  )
+}
+
+const HebrewSelect = (props) => {
+  const activeFontSize = props.langSelected ? '1.1rem' : '0.7rem';
+  const activeFlagSize = props.langSelected ? '1.2rem': '1rem';
   
-)
-const HebrewSelect = () => (
-  <div>
-    <p style={{ margin: '0', fontSize:'0.8rem'}}>עברית</p>
-    <FlagIcon code="il" />
-  </div>
-  
-)
+  return (
+    <div>
+      <p style={{ margin: '0', fontSize: activeFontSize}}>עברית</p>
+      <FlagIcon code="il"/>
+    </div>
+  )
+}
 
 const SelectLanguage = (props) => {
   const links = props.langs.map((lang, i, langArr) => {
     const separator = i === (langArr.length - 1) ? '' : '|';
     const paddingLeft = i === (langArr.length - 1) ? '0.5rem' : '';
 
+
     return (
-      <Link to={lang.link} key={lang.langKey} style={{ color: 'white' }}>
-        <li selected={lang.selected} >
-          {lang.langKey === 'en' ? <EnglishSelect/> : <HebrewSelect/> }
-        </li>
-      </Link>
+      <li selected={lang.selected} key={lang.langKey} style={{ marginBottom: 0}}>
+        <Link to={lang.link} style={{ color: 'white' }}>
+          {lang.langKey === 'en' ? <EnglishSelect langSelected={lang.selected} /> : <HebrewSelect langSelected={lang.selected} />}
+        </Link>
+      </li>
     )
   });
 

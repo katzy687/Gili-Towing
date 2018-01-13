@@ -68,15 +68,17 @@ class TemplateWrapper extends Component {
               
           >
             <Header langs={langsMenu} title={langTitle} langKey={langKey} sideBarTriggerClicked={this.openSideBar} />
-            <div
-              dir={langDirection}
-              style={{
-                margin: '0 auto',
-                maxWidth: 960,
-                // padding: '0px 1.0875rem 1.45rem',
-              }}
-            >
-              {this.props.children()}
+            <div style={{ maxWidth: 1300, background: '#E0E0E0', padding: '0 0 2rem 0', margin: '0 auto' }}>
+              <div
+                dir={langDirection}
+                style={{
+                  margin: '0 auto',
+                  maxWidth: 960,
+                  // padding: '0px 1.0875rem 1.45rem',
+                }}
+              >
+                {this.props.children()}
+              </div>
             </div>
             <Footer />
           </Sidebar>

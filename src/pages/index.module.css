@@ -1,22 +1,8 @@
 @import "../layouts/variables.css";
 
-.mobileContainer {
-  padding: 0.5rem 1rem;
-}
-
-/* .GridContainer {
-  display: grid;
-  grid-template-columns: 1rem 1fr 1rem;
-  grid-template-areas: 
-    "nav nav nav"
-    "crsl crsl crsl"
-    ". desc ."
-    "map map map"
-    ". srvc ."
-} */
-
-.navContainer {
-  /* grid-area: nav; */
+.Description, .MapTracker, .Services {
+  max-width: 768px;
+  margin: auto;
 }
 
 .navContainer ul {

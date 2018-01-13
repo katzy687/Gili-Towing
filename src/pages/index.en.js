@@ -10,10 +10,10 @@ import SmoothCollapse from 'react-smooth-collapse';
 
 // images
 import truckImg from '../assets/giliTruck.jpg';
-import middleOf from '../assets/middleOfNoWhere.jpg';
-import yo from '../assets/yo.jpg';
+import classic from '../assets/classic.jpg';
+import atv from '../assets/atv.jpg';
+import garage from '../assets/garage.jpg'
 import gf from '../assets/girlfriend.jpg';
-import towIcon from '../assets/towtruck.svg';
 
 //icons
 import MdArrowDown from 'react-icons/lib/md/keyboard-arrow-down';
@@ -31,7 +31,7 @@ const MainSlider = (props) => (
     className={styles.Carousel}
   >
     <div>
-      <img src={truckImg} alt="" />
+      <img src={truckImg} alt="gili tow truck" />
       {/* <Img
         title={'gili\'s truck'}
         sizes={props.img1}
@@ -39,7 +39,7 @@ const MainSlider = (props) => (
       {/* <p className="legend">Legend 2</p> */}
     </div>
     <div>
-      <img src={middleOf} alt="" />
+      <img src={classic} alt="gili tow classic cars" />
       {/* <Img
         title={'truck in middle of nowhere'}
         sizes={props.img2}
@@ -47,7 +47,7 @@ const MainSlider = (props) => (
       {/* <p className="legend">Legend 3</p> */}
     </div>
     <div>
-      <img src={yo} alt="" />
+      <img src={atv} alt="gili tow atv" />
       {/* <Img
         title={'gili\'s girl'}
         sizes={props.img3}
@@ -55,7 +55,15 @@ const MainSlider = (props) => (
       {/* <p className="legend">Legend 1</p> */}
     </div>
     <div>
-      <img src={gf} alt="" />
+      <img src={garage} alt="gili tow garage" />
+      {/* <Img
+        title={'gili\'s girl'}
+        sizes={props.img3}
+      /> */}
+      {/* <p className="legend">Legend 1</p> */}
+    </div>
+    <div>
+      <img src={gf} alt="gili tow truck desert" />
       {/* <Img
         title={'gili\'s girl'}
         sizes={props.img3}

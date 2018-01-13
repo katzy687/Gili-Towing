@@ -39,22 +39,26 @@ const SiteTitle = (props) => {
 const CallMeNow = (props) => {
   const callMe = props.langKey === "en" ? 'Need a tow? Call Now!' : 'צריך גרירה, תתקשר!';
   return (
-  <div className={styles.CallMeNow} >
-    <p>{callMe}</p>
-    <PhoneButton customId="mobile-call" />
-  </div>
-)}
-
-
-const Header = (props) => (
-  <div style={{background: 'rebeccapurple', width: '100vw'}} >
-    <div className={styles.HeaderContainer} >
-      <SideBarTrigger clicked={props.sideBarTriggerClicked} />
-      <SelectLanguage langs={props.langs} className={styles.SelectLanguage} />
-      <SiteTitle title={props.title} langKey={props.langKey} />
-      <CallMeNow langKey={props.langKey}/>
+    <div className={styles.CallMeNow} >
+      <p>{callMe}</p>
+      <PhoneButton customId="mobile-call" />
     </div>
-  </div>
-)
+  )
+}
+
+
+const Header = (props) => {
+  console.log('headerprops', props);
+  return (
+    <div style={{ background: 'rebeccapurple', width: '100vw' }} >
+      <div className={styles.HeaderContainer} >
+        <SideBarTrigger clicked={props.sideBarTriggerClicked} />
+        <SelectLanguage langs={props.langs} className={styles.SelectLanguage} langKey={props.langKey} />
+        <SiteTitle title={props.title} langKey={props.langKey} />
+        <CallMeNow langKey={props.langKey} />
+      </div>
+    </div>
+  )
+}
 
 export default Header;
