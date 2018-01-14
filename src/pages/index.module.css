@@ -49,8 +49,6 @@
 .MapTracker {
   /* grid-area: map; */
   background: var(--secondary-color);
-  height: 30vh;
-  /* min-width: 400px; */
   width: 100%;
   margin: 1rem auto;
 

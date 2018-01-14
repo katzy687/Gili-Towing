@@ -58,6 +58,7 @@ class TemplateWrapper extends Component {
             meta={[
               { name: 'description', content: 'Sample' },
               { name: 'keywords', content: 'sample, something' },
+              { name: 'keywords', content: 'Gili-towing, 24/7, towing, blondes' },
             ]}
           />
           <Sidebar sidebar={<SideBarContent langKey={langKey} closeHandler={this.closeSideBar}/>}

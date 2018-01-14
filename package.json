@@ -36,8 +36,9 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "addCNAME": "cd public && echo gili-grar.surge.sh > CNAME",
-    "deploySurge": "gatsby build && surge public/"
+    "addCNAME": "cd public && echo gili-towing-telaviv.surge.sh > CNAME",
+    "surge": "surge public/",
+    "buildSurge": "gatsby build && surge public/"
   },
   "devDependencies": {
     "prettier": "^1.7.4"

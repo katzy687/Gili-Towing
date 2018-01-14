@@ -140,9 +140,10 @@ const Services = () => (
 
 const MapTracker = () => (
   <section className={styles.MapTracker} >
-    <p>Hi, I'm currently in: <span style={{ fontStyle: 'italic' }} >Petach Tikvah</span></p>
+    <p>Hi, if I'm currently active, you'll see my location on the map</p>
     <div className={styles.mapContainer}>
-      <div>map goes here</div>
+      {/* <div>map goes here</div> */}
+      <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
     </div>
   </section>
 )
