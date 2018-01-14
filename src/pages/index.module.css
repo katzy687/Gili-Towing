@@ -1,19 +1,8 @@
 @import "../layouts/variables.css";
 
-.GridContainer {
-  display: grid;
-  /* grid-gap: 1.45rem; */
-  grid-template-columns: 1rem 1fr 1rem;
-  grid-template-areas: 
-    "nav nav nav"
-    "crsl crsl crsl"
-    ". desc ."
-    "map map map"
-    ". srvc ."
-}
-
-.navContainer {
-  grid-area: nav;
+.Description, .MapTracker, .Services {
+  max-width: 768px;
+  margin: auto;
 }
 
 .navContainer ul {
@@ -43,17 +32,25 @@
 }
 
 .Carousel {
-  grid-area: crsl;
+  /* grid-area: crsl; */
+  max-width: 500px;
+  margin: 1rem auto;
+  direction: ltr;
 }
 
+
 .Description {
-  grid-area: desc;
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto 0;
+  max-width: 768px;
 }
 
 .MapTracker {
-  grid-area: map;
+  /* grid-area: map; */
   background: var(--secondary-color);
+  width: 100%;
+  margin: 1rem auto;
 
 }
 
@@ -63,20 +60,78 @@
 }
 
 .MapTracker .mapContainer {
-  height: 50vh;
-  width: 100%;
+  
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .ServiceContainer {
-  grid-area: srvc;
+  /* grid-area: srvc; */
 }
 
 .ServiceContainer h3 {
   margin-top: 1rem;
 }
 
+.callMe {
+  display: none;
+}
 
+.serviceTitle {
+  border: solid 1px black;
+  padding: 0.5rem;
+  margin-bottom: 0.7rem;
+}
 
+.Services {
+  background: white;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  
+  .callMe {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .checkMap {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 968px) {
+  .gridContainer {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "desc carousel"
+      "services map"
+  }
+
+  .MapTracker {
+    grid-area: map;
+    margin: 0;
+    max-height: 30vh;
+  }
+
+  .Carousel {
+    grid-area: carousel;
+    margin-bottom: 0;
+  }
+
+  .Services {
+    grid-area: services;
+    margin: 0;
+  }
+
+  .Description {
+    grid-area: desc;
+  }
+}
