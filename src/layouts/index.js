@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Header from '../components/Header'
-import Helmet from 'react-helmet'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Header from '../components/Header';
+import Helmet from 'react-helmet';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider } from 'react-intl';
 import 'intl';
-import './index.css'
+import './index.css';
 
 const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
   const url = location.pathname;
@@ -16,8 +16,7 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
   const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
 
   // const langAlign = langKey === 'he' ? 'right' : 'left';
-  const langDirection = langKey === 'he' ? 'rtl' : 'ltr';
-  const langTitle = langKey === 'he' ? 'גרר גילי' : 'Gili\'s Towing 24/7';
+  const langDirection = langKey === 'he' ? 'rtl' : 'ltr';  
 
   return (
     <IntlProvider
@@ -32,7 +31,7 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <Header langs={langsMenu} title={langTitle} langKey={langKey}/>
+        <Header langs={langsMenu} langKey={langKey}/>
         <div
           dir={langDirection}
           style={{
