@@ -31,7 +31,7 @@ const SiteTitle = (props) => {
         <p>
           {serviceArea}		   
         </p>
-			<p style={{fontSize:'0.7rem'}}>{towingMsg}</p>
+			{/* <p style={{fontSize:'0.7rem'}}>{towingMsg}</p> */}
       </Link>
     </div>
   );

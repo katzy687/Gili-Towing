@@ -94,7 +94,7 @@ class ServiceContainer extends Component {
     const arrowIcon = !this.state.isOpened ? <MdArrowDown /> : <MdArrowUp />;
     return (
       <div>
-        <p onClick={this.toggleOnClick} className={styles.serviceTitle}><span> {arrowIcon} {this.props.serviceTitle} </span></p>
+        <h5 onClick={this.toggleOnClick} className={styles.serviceTitle}><span> {arrowIcon} {this.props.serviceTitle} </span></h5>
         <SmoothCollapse expanded={this.state.isOpened}>
           <p>{this.props.serviceDescription}</p>
         </SmoothCollapse>
