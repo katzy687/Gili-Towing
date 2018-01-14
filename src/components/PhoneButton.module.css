@@ -4,6 +4,7 @@
   /* width: 30%; */
   margin: 0;
   font-family: monospace;
+  direction: ltr;
 }
 
 .Phone span {
@@ -11,5 +12,7 @@
 }
 
 .Phone a {
+	/*display: block;*/
+	direction: ltr;
   color: black;
 }
