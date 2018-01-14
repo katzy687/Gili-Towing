@@ -81,7 +81,7 @@ class TemplateWrapper extends Component {
                 {this.props.children()}
               </div>
             </div>
-            <Footer />
+            <Footer langKey={langKey}/>
           </Sidebar>
         </div>
       </IntlProvider>

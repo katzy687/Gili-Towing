@@ -153,7 +153,7 @@ const MapTracker = () => (
     <p>Hi, if I'm currently active, you'll see my location on the map</p>
     <div className={styles.mapContainer} dir="ltr">
       {/* <div>map goes here</div> */}
-      <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+      <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginHeight="0" marginWidth="0" frameBorder="0"></iframe>
     </div>
   </section>
 )
