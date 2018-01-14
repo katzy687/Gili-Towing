@@ -17,10 +17,10 @@ const SideBarTrigger = (props) => (
 const SiteTitle = (props) => {
   const styledTitle = props.langKey === "en" ?
     <span><span className={styles.Gili} >Gili's </span>Towing 24/7</span> :
-    <span>שירותי גרירה <span className={styles.Gili}>גילי</span></span>;
+    <span>שירותי גרירה <span className={styles.Gili}>גילי</span> 24/7</span>;
 
   const serviceArea = props.langKey === "en" ? 'Tel Aviv / Central Israel' : 'תל אביב \\ מרכז הארץ';
-  const towingMsg = props.langKey === "en" ? 'Need a tow? Call Now!' : 'נתקעת עם הרכב? צריך שירותי גרירה? התקשר עכשיו';
+  const towingMsg = props.langKey === "en" ? 'Need a tow? Call Now!' : 'נתקעת עם הרכב? צריך שירותי גרירה? התקשרו עכשיו';
 
   return (
     <div className={styles.SiteTitle}>
