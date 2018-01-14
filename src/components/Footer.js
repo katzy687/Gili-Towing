@@ -18,10 +18,10 @@ const Footer = (props) => {
 
   const hebrewContent = (
     <div style={styles} >
-      <p>Hebrew text goes here</p>
-      <p>Check out my <Link to="/community/" style={footerLinkStyles}> community service page </Link> for more details.</p>
-      <p>You can reach me by email at <a style={footerLinkStyles} href="">GiliLovesBlondes@gmail.com</a></p>
-      <p>Or you can always call</p>
+      
+      <p>מוזמנים להתרשם ולהצטרף אליי ב<Link to="/community/" style={footerLinkStyles}> עזרה לקהילה </Link></p>
+      <p>ניתן גם להשיג אותי במייל <a style={footerLinkStyles} href="">GiliLovesBlondes@gmail.com</a></p>
+      <p>או לחלופין בפלאפון</p>
       <PhoneButton />
     </div>
   );

@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider } from 'react-intl';
 import 'intl';
-import './index.css'
+import './index.css';
 import styles from './index.module.css';
 import Sidebar from 'react-sidebar';
 import SideBarContent from '../components/SideBarContent';

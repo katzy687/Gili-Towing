@@ -8,6 +8,16 @@ import PhoneButton from '../components/PhoneButton';
 import { Collapse } from 'react-collapse';
 import SmoothCollapse from 'react-smooth-collapse';
 
+/*const IndexPage = () => (
+  <div>
+    <h3>אהלן, קוראים לי גילי.</h3>
+    <p> צריך גרר וחילוץ? הגעת למקום הנכון!</p>
+    <div className="truck-wrapper" style={{ textAlign: "center" }}>
+      <img src={truckImg} alt="truck" />
+    </div>
+    <Link to="/he/page-2/">תמשיך הלאה לדף שני חביבי</Link>
+  </div>
+ */
 // images
 import truckImg from '../assets/giliTruck.jpg';
 import classic from '../assets/classic.jpg';
@@ -20,8 +30,8 @@ import MdArrowDown from 'react-icons/lib/md/keyboard-arrow-down';
 import MdArrowUp from 'react-icons/lib/md/keyboard-arrow-up';
 
 //data 
-import {enTowingServices, enRoadSide, enOtherServices} from '../data/services';
-console.log(enTowingServices);
+import {heTowingServices, heRoadSide, heOtherServices} from '../data/services';
+console.log(heTowingServices);
 
 const MainSlider = (props) => (
   <Carousel showThumbs={false}
@@ -111,28 +121,26 @@ const ServiceList = (props) => {
 
 const Description = () => (
   <section className={[styles.Description, 'white-card'].join(' ')} >
-    <p> Hi, my name is Gili and I'm here to fix your day. I am based in Central Israel, but I can arrive anywhere in the country at any time of day for emergency services and roadside assistance.
-    </p>
-    <p>You can see my full list of towing and roadside assistance services below.</p>
-    
+    <p> אהלן, אני גילי ואני כאן כדי להציל את המצב אליו נקלעת! אני ממוקם בעיקר באזור תל אביב והמרכז, אך בתיאום מראש אוכל להגיע לכל נקודה בארץ, בכל שעות היממה ולתת עזרה מכל סוג בדרכים.
+    </p>    
     {/* desktop view */}
     <p className={styles.checkMap} >You can also check the map below to see how close I am to you.</p>
-    <p className={styles.callMe} >Need a tow? Call Now!</p>
+    <p className={styles.callMe}> צריכ/ה גרירה? התקשרו עכשיו!</p>
     <PhoneButton customId="tablet-call" customStyle={{ width: '222px', margin: '0 auto', padding: '0.3rem', fontSize: '1.2rem', color: 'white' }} />
   </section>
 )
 
 const Services = () => (
   <section className={styles.Services} >
-    <h1>Services</h1>
-    <h3>Towing:</h3>
-    <ServiceList serviceArr={enTowingServices} />
+    <h1>שרותים:</h1>
+    <h3>גרירה:</h3>
+    <ServiceList serviceArr={heTowingServices} />
 
-    <h3>Roadside Assistance:</h3>
-    <ServiceList serviceArr={enRoadSide} />
+    <h3>שרותי דרכים:</h3>
+    <ServiceList serviceArr={heRoadSide} />
     
-    <h3>Other Services:</h3>
-    <ServiceList serviceArr={enOtherServices} />
+    <h3>שרותים נוספים:</h3>
+    <ServiceList serviceArr={heOtherServices} />
     
 
   </section>
@@ -140,7 +148,7 @@ const Services = () => (
 
 const MapTracker = () => (
   <section className={styles.MapTracker} >
-    <p>Hi, if I'm currently active, you'll see my location on the map</p>
+    <p>המיקום הנוכחי שלי:</p>
     <div className={styles.mapContainer} dir="ltr">
       {/* <div>map goes here</div> */}
       <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginHeight="0" marginWidth="0" frameBorder="0"></iframe>
