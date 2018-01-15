@@ -89,7 +89,7 @@ class ServiceContainer extends Component {
     return (
       <div>
         <h5 onClick={this.toggleOnClick} className={styles.serviceTitle} style={{ display: 'flex', alignItems: 'center' }}>
-          <div className={rotatedClass} style={{ width: '1.5rem', marginRight: '0.7rem', transition: 'all linear 0.3s'}}>
+          <div className={rotatedClass} style={{ width: '1.5rem', marginRight: '0.7rem', transition: 'all linear 0.2s'}}>
             <img  style={{ marginBottom: 0, display: 'block'}} src={toolIcon} alt="tool icon" />
           </div>
           <div>

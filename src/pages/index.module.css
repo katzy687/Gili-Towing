@@ -5,6 +5,10 @@
   margin: auto;
 }
 
+.Description, .MapTracker, .Services, .Carousel {
+  border-radius: 3px;
+}
+
 .navContainer ul {
   display: flex;
   height: 12vh;
