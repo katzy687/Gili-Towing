@@ -17,7 +17,7 @@
 .SideBarTrigger {
   grid-area: hmbg;
   display: inline-block;
-  color: white;
+  color: #FAFAFA;
   padding: 0.5rem;
   font-size: 2rem;
 }
@@ -35,7 +35,7 @@
 
 .CallMeNow p {
   margin: 0;
-  color: white;
+  color: #FAFAFA;
   font-size: 0.8rem;
 }
 
@@ -68,7 +68,7 @@
 
 .CallToAction>p {
   font-size: 0.8em;
-  color: white;
+  color: #FAFAFA;
   margin: 0;
 }
 

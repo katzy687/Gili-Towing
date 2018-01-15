@@ -5,10 +5,12 @@ import styles from './header.module.css';
 import MdMenuIcon from 'react-icons/lib/md/menu';
 import PhoneButton from './PhoneButton';
 
+// import woodBG from '../assets/wood-bg.jpg';
 
 const SideBarTrigger = (props) => (
   <div className={styles.SideBarTrigger}
     onClick={props.clicked}
+    style={{ cursor: 'pointer'}}
   >
     <MdMenuIcon />
   </div>
@@ -24,7 +26,7 @@ const SiteTitle = (props) => {
 
   return (
     <div className={styles.SiteTitle}>
-      <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+      <Link to="/" style={{ textDecoration: 'none', color: '#FAFAFA' }}>
         <h1>
           {styledTitle}		 
         </h1>
@@ -54,7 +56,7 @@ const CallMeNow = (props) => {
 const Header = (props) => {
   console.log('headerprops', props);
   return (
-    <div style={{ background: 'rebeccapurple', width: '100vw' }} >
+    <div style={{ background:  '#fda000', width: '100vw' }} >
       <div className={styles.HeaderContainer} >
         <SideBarTrigger clicked={props.sideBarTriggerClicked} />
         <SelectLanguage langs={props.langs} className={styles.SelectLanguage} langKey={props.langKey} />
@@ -66,3 +68,6 @@ const Header = (props) => {
 }
 
 export default Header;
+
+// alternate wood bg
+// `url(${woodBG})`

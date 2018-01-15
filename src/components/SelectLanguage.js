@@ -36,7 +36,7 @@ const SelectLanguage = (props) => {
 
     return (
       <li selected={lang.selected} key={lang.langKey} style={{ marginBottom: 0}}>
-        <Link to={lang.link} style={{ color: 'white' }}>
+        <Link to={lang.link} style={{ color: '#FAFAFA' }}>
           {lang.langKey === 'en' ? <EnglishSelect langSelected={lang.selected} /> : <HebrewSelect langSelected={lang.selected} />}
         </Link>
       </li>

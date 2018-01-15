@@ -8,6 +8,7 @@ import PhoneButton from '../components/PhoneButton';
 import { Collapse } from 'react-collapse';
 import SmoothCollapse from 'react-smooth-collapse';
 
+import {ServiceList} from './index.en';
 import GiliGlympse from '../components/GiliGlympse';
 
 /*const IndexPage = () => (
@@ -85,40 +86,40 @@ const MainSlider = (props) => (
   </Carousel>
 )
 
-class ServiceContainer extends Component {
-  state = { isOpened: false }
+// class ServiceContainer extends Component {
+//   state = { isOpened: false }
 
-  toggleOnClick = () => {
-    this.setState({ isOpened: !this.state.isOpened })
-  }
+//   toggleOnClick = () => {
+//     this.setState({ isOpened: !this.state.isOpened })
+//   }
 
-  render() {
-    const arrowIcon = !this.state.isOpened ? <MdArrowDown /> : <MdArrowUp />;
-    return (
-      <div>
-        <h5 onClick={this.toggleOnClick} className={styles.serviceTitle}><span> {arrowIcon} {this.props.serviceTitle} </span></h5>
-        <SmoothCollapse expanded={this.state.isOpened}>
-          <p>{this.props.serviceDescription}</p>
-        </SmoothCollapse>
-      </div>
-    )
-  }
-}
+//   render() {
+//     const arrowIcon = !this.state.isOpened ? <MdArrowDown /> : <MdArrowUp />;
+//     return (
+//       <div>
+//         <h5 onClick={this.toggleOnClick} className={styles.serviceTitle}><span> {arrowIcon} {this.props.serviceTitle} </span></h5>
+//         <SmoothCollapse expanded={this.state.isOpened}>
+//           <p>{this.props.serviceDescription}</p>
+//         </SmoothCollapse>
+//       </div>
+//     )
+//   }
+// }
 
-const ServiceList = (props) => {
+// const ServiceList = (props) => {
 
-  const services = props.serviceArr.map((item) => {
-    return (
-      <ServiceContainer key={item.title} serviceTitle={item.title} serviceDescription={item.description} />
-    )
-  })
+//   const services = props.serviceArr.map((item) => {
+//     return (
+//       <ServiceContainer key={item.title} serviceTitle={item.title} serviceDescription={item.description} />
+//     )
+//   })
 
-  return (
-    <ul>
-      {services}
-    </ul>
-  )
-}
+//   return (
+//     <ul>
+//       {services}
+//     </ul>
+//   )
+// }
 
 
 const Description = () => (

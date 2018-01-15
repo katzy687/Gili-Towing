@@ -18,9 +18,11 @@ import gf from '../assets/girlfriend.jpg';
 //icons
 import MdArrowDown from 'react-icons/lib/md/keyboard-arrow-down';
 import MdArrowUp from 'react-icons/lib/md/keyboard-arrow-up';
+import toolIcon from '../assets/tools-30px.png';
+import SVG from 'react-inlinesvg';
 
 //data 
-import {enTowingServices, enRoadSide, enOtherServices} from '../data/services';
+import { enTowingServices, enRoadSide, enOtherServices } from '../data/services';
 import GiliGlympse from '../components/GiliGlympse';
 console.log(enTowingServices);
 
@@ -82,10 +84,18 @@ class ServiceContainer extends Component {
   }
 
   render() {
-    const arrowIcon = !this.state.isOpened ? <MdArrowDown /> : <MdArrowUp />;
+    // const arrowIcon = !this.state.isOpened ? <MdArrowDown /> : <MdArrowUp />;
+    const rotatedClass = !this.state.isOpened ? '' : styles.rotated;
     return (
       <div>
-        <h5 onClick={this.toggleOnClick} className={styles.serviceTitle}><span> {arrowIcon} {this.props.serviceTitle} </span></h5>
+        <h5 onClick={this.toggleOnClick} className={styles.serviceTitle} style={{ display: 'flex', alignItems: 'center' }}>
+          <div className={rotatedClass} style={{ width: '1.5rem', marginRight: '0.7rem', transition: 'all linear 0.3s'}}>
+            <img  style={{ marginBottom: 0, display: 'block'}} src={toolIcon} alt="tool icon" />
+          </div>
+          <div>
+            {this.props.serviceTitle}
+          </div>
+        </h5>
         <SmoothCollapse expanded={this.state.isOpened}>
           <p>{this.props.serviceDescription}</p>
         </SmoothCollapse>
@@ -94,7 +104,7 @@ class ServiceContainer extends Component {
   }
 }
 
-const ServiceList = (props) => {
+export const ServiceList = (props) => {
 
   const services = props.serviceArr.map((item) => {
     return (
@@ -115,7 +125,7 @@ const Description = () => (
     <p> Hi, my name is Gili and I'm here to fix your day. I am based in Central Israel, but I can arrive anywhere in the country at any time of day for emergency services and roadside assistance.
     </p>
     <p>You can see my full list of towing and roadside assistance services below.</p>
-    
+
     {/* desktop view */}
     <p className={styles.checkMap} >You can also check the map below to see how close I am to you.</p>
     <p className={styles.callMe} >Need a tow? Call Now!</p>
@@ -131,17 +141,17 @@ const Services = () => (
 
     <h3>Roadside Assistance:</h3>
     <ServiceList serviceArr={enRoadSide} />
-    
+
     <h3>Other Services:</h3>
     <ServiceList serviceArr={enOtherServices} />
-    
+
 
   </section>
 )
 
 const MapTracker = () => (
   <section className={styles.MapTracker} >
-    <p style={{textAlign: 'center'}} >If I'm active, you'll see my location here</p>
+    <p style={{ textAlign: 'center' }} >If I'm active, you'll see my location here</p>
     <div className={styles.mapContainer}>
       {/* <div>map goes here</div> */}
       {/* <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginHeight="0" marginWidth="0" frameBorder="0"></iframe> */}

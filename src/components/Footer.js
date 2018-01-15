@@ -32,14 +32,14 @@ export default Footer;
 
 const styles = {
   // height: '10vh', 
-  background: '#424242',
-  color: 'white',
+  background: '#fda000',
+  color: '#FAFAFA',
   textAlign: 'center',
   padding: '1.5rem',
   width: '100vw'
 }
 
 const footerLinkStyles = {
-  color: '#4FC3F7',
+  // color: '#4FC3F7',
   textDecoration: 'underline'
 }
