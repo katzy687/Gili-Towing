@@ -40,7 +40,7 @@ const SiteTitle = (props) => {
 
 // location needs to be made dynamic
 const CallMeNow = (props) => {
-  const callMe = props.langKey === "en" ? 'Need a tow? Call Now!' : 'צריך גרירה, תתקשר!';
+  const callMe = props.langKey === "en" ? 'Need a tow? Call Now!' : 'צריך גרירה? תתקשר';
   return (
     <div className={styles.CallMeNow} >
       <p>{callMe}</p>
