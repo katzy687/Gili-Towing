@@ -21,6 +21,7 @@ import MdArrowUp from 'react-icons/lib/md/keyboard-arrow-up';
 
 //data 
 import {enTowingServices, enRoadSide, enOtherServices} from '../data/services';
+import GiliGlympse from '../components/GiliGlympse';
 console.log(enTowingServices);
 
 const MainSlider = (props) => (
@@ -84,7 +85,7 @@ class ServiceContainer extends Component {
     const arrowIcon = !this.state.isOpened ? <MdArrowDown /> : <MdArrowUp />;
     return (
       <div>
-        <p onClick={this.toggleOnClick} className={styles.serviceTitle}><span> {arrowIcon} {this.props.serviceTitle} </span></p>
+        <h5 onClick={this.toggleOnClick} className={styles.serviceTitle}><span> {arrowIcon} {this.props.serviceTitle} </span></h5>
         <SmoothCollapse expanded={this.state.isOpened}>
           <p>{this.props.serviceDescription}</p>
         </SmoothCollapse>
@@ -140,10 +141,11 @@ const Services = () => (
 
 const MapTracker = () => (
   <section className={styles.MapTracker} >
-    <p>Hi, if I'm currently active, you'll see my location on the map</p>
+    <p style={{textAlign: 'center'}} >If I'm active, you'll see my location here</p>
     <div className={styles.mapContainer}>
       {/* <div>map goes here</div> */}
-      <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginHeight="0" marginWidth="0" frameBorder="0"></iframe>
+      {/* <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginHeight="0" marginWidth="0" frameBorder="0"></iframe> */}
+      <GiliGlympse />
     </div>
   </section>
 )

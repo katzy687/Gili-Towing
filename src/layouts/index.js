@@ -66,10 +66,10 @@ class TemplateWrapper extends Component {
             sidebarClassName={styles.sideBar}
             contentClassName={styles.sideBarContent}
             onSetOpen={this.onSetSidebarOpen}
-              
+            styles={{ overflow: 'hidden' }}
           >
             <Header langs={langsMenu} title={langTitle} langKey={langKey} sideBarTriggerClicked={this.openSideBar} />
-            <div style={{ maxWidth: 1300, background: '#E0E0E0', padding: '0 0 2rem 0', margin: '0 auto' }}>
+            <div style={{ maxWidth: 1300, background: '#9E9E9E', padding: '1rem 0 1rem 0', margin: '0 auto' }}>
               <div
                 dir={langDirection}
                 style={{

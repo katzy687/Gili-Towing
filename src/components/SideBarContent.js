@@ -13,24 +13,25 @@ const getProp = (langKey, enProp, heProp) => langKey === 'en' ? enProp : heProp;
 
 const SideBarContent = (props) => {
   const langKey = props.langKey;
+  const closeBtn = props.langKey === 'en' ? 'Close Menu' : 'סגור';
   const linkItems = [
-    { name: getProp(langKey, 'Home', 'דף בית'), 
+    { name: getProp(langKey, 'Home Page', 'דף בית'), 
       icon: <MdHome />, 
       route: `` 
     },
-    { name: getProp(langKey, 'Towing Services', 'שרותי גרירה'), 
-      icon: <FaAuto />, 
-      route: `towing` 
-    },
-    { name: getProp(langKey, 'Battery Replacement', 'מצברים'), 
-      icon: <FaBattery1 />, 
-      route: `battery` 
-    },
-    { name: getProp(langKey, 'Metal Scrapping', 'גרוטאות מתכת'), 
-      icon: <FaTrash />, 
-      route: `scrap` 
-    },
-    { name: getProp(langKey, 'Community Work', 'עבודות שירות'),
+    // { name: getProp(langKey, 'Towing Services', 'שרותי גרירה'), 
+    //   icon: <FaAuto />, 
+    //   route: `towing` 
+    // },
+    // { name: getProp(langKey, 'Battery Replacement', 'מצברים'), 
+    //   icon: <FaBattery1 />, 
+    //   route: `battery` 
+    // },
+    // { name: getProp(langKey, 'Metal Scrapping', 'גרוטאות מתכת'), 
+    //   icon: <FaTrash />, 
+    //   route: `scrap` 
+    // },
+    { name: getProp(langKey, 'Community Work', 'שירותי עזרה לקהילה'),
       icon: <FaHeart />, 
       route: `community` 
     }
@@ -40,7 +41,7 @@ const SideBarContent = (props) => {
     return (
       <li key={item.name} onClick={props.closeHandler} >
         <Link to={newPath}>
-          <span> {item.icon}  {item.name} </span>
+          <p><span style={{marginRight: '0.5rem'}}>{item.icon}</span>  {item.name}</p>
         </Link>
       </li>
     )
@@ -48,7 +49,7 @@ const SideBarContent = (props) => {
 
   return (
     <ul >
-      <li key="close menu" onClick={props.closeHandler} ><MdClose /> Close Menu</li>
+      <li key="close menu" onClick={props.closeHandler} ><MdClose style={{marginRight: '0.5rem'}}/>{closeBtn}</li>
       {menuLinks}
     </ul>
   )
