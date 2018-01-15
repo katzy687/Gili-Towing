@@ -1,8 +1,8 @@
 .sideBar {
   background: #eee;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 
 .sideBar:nth-child(2) {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }

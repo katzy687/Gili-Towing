@@ -21,6 +21,7 @@ import MdArrowUp from 'react-icons/lib/md/keyboard-arrow-up';
 
 //data 
 import {enTowingServices, enRoadSide, enOtherServices} from '../data/services';
+import GiliGlympse from '../components/GiliGlympse';
 console.log(enTowingServices);
 
 const MainSlider = (props) => (
@@ -143,7 +144,8 @@ const MapTracker = () => (
     <p style={{textAlign: 'center'}} >If I'm active, you'll see my location here</p>
     <div className={styles.mapContainer}>
       {/* <div>map goes here</div> */}
-      <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginHeight="0" marginWidth="0" frameBorder="0"></iframe>
+      {/* <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginHeight="0" marginWidth="0" frameBorder="0"></iframe> */}
+      <GiliGlympse />
     </div>
   </section>
 )

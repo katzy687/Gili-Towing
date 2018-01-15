@@ -8,6 +8,8 @@ import PhoneButton from '../components/PhoneButton';
 import { Collapse } from 'react-collapse';
 import SmoothCollapse from 'react-smooth-collapse';
 
+import GiliGlympse from '../components/GiliGlympse';
+
 /*const IndexPage = () => (
   <div>
     <h3>אהלן, קוראים לי גילי.</h3>
@@ -124,7 +126,7 @@ const Description = () => (
     <p> אהלן, אני גילי ואני כאן כדי להציל את המצב אליו נקלעת! אני ממוקם בעיקר באזור תל אביב והמרכז, אך בתיאום מראש אוכל להגיע לכל נקודה בארץ, בכל שעות היממה ולתת עזרה מכל סוג בדרכים.
     </p>    
     {/* desktop view */}
-    <p className={styles.checkMap} >You can also check the map below to see how close I am to you.</p>
+    <p className={styles.checkMap} >תוכל גם לבדוק את המפה שבהמשך כדי לראות את המיקום שלי</p>
     <p className={styles.callMe}> צריכ/ה גרירה? התקשרו עכשיו!</p>
     <PhoneButton customId="tablet-call" customStyle={{ width: '222px', margin: '0 auto', padding: '0.3rem', fontSize: '1.2rem', color: 'white' }} />
   </section>
@@ -132,7 +134,7 @@ const Description = () => (
 
 const Services = () => (
   <section className={styles.Services} >
-    <h1>שרותים:</h1>
+    <h1>שרותים</h1>
     <h3>גרירה:</h3>
     <ServiceList serviceArr={heTowingServices} />
 
@@ -148,10 +150,11 @@ const Services = () => (
 
 const MapTracker = () => (
   <section className={styles.MapTracker} >
-    <p>המיקום הנוכחי שלי:</p>
+    <p style={{textAlign: 'center', fontSize: '1.2rem'}}>המיקום הנוכחי שלי</p>
     <div className={styles.mapContainer} dir="ltr">
       {/* <div>map goes here</div> */}
-      <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginHeight="0" marginWidth="0" frameBorder="0"></iframe>
+      {/* <iframe id="glympser" width="500" height="400" src="//glympse.com/ext/!yo" scrolling="no" marginHeight="0" marginWidth="0" frameBorder="0"></iframe> */}
+      <GiliGlympse />
     </div>
   </section>
 )
