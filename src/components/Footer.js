@@ -7,7 +7,7 @@ const Footer = (props) => {
   const englishContent = (
     <div style={styles} >
       <p>I am very involved with the local Harley Davidson Association and we provide lots of services in the community.</p>
-      <p>Check out my <Link to="/community/" style={footerLinkStyles}> community service page </Link> for more details.</p>
+      <p>Check out my <Link to={`/${props.langKey}/community/`} style={footerLinkStyles}> community service page </Link> for more details.</p>
       <p>You can reach me by email at <a style={footerLinkStyles} href="">GiliTowing@gmail.com</a></p>
       <p>Or you can always call</p>
       <PhoneButton />
@@ -17,7 +17,7 @@ const Footer = (props) => {
   const hebrewContent = (
     <div style={styles} >
       
-      <p>מוזמנים להתרשם ולהצטרף אליי ב<Link to="/community/" style={footerLinkStyles}> עזרה לקהילה </Link></p>
+      <p>מוזמנים להתרשם ולהצטרף אליי ב<Link to={`/${props.langKey}/community/`} style={footerLinkStyles}> עזרה לקהילה </Link></p>
       <p>ניתן גם להשיג אותי במייל <a style={footerLinkStyles} href="">GiliTowing@gmail.com</a></p>
       <p>או לחלופין בפלאפון</p>
       <PhoneButton />
