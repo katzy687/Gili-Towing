@@ -7,7 +7,7 @@ export const enCards = [
   {
     pic: crewPic,
     header: 'About Us',
-    desription:'I love Harleys. Besides for just riding, we at the Israeli Harley Davidson Community support the community every year through ride along events and visits to victims of disease.'
+    desription:'I love Harleys. Besides for just riding, we at the Israeli Harley Davidson Community support the community every year through ride along events and home visits to victims of disease.'
   },
   {
     pic: postinPic,

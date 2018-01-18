@@ -26,7 +26,7 @@ const SiteTitle = (props) => {
 
   return (
     <div className={styles.SiteTitle}>
-      <Link to="/" style={{ textDecoration: 'none', color: '#FAFAFA' }}>
+      <Link to={`/${props.langKey}`} style={{ textDecoration: 'none', color: '#FAFAFA' }}>
         <h1>
           {styledTitle}		 
         </h1>
