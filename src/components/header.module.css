@@ -1,17 +1,19 @@
 .HeaderContainer {
   text-align: center;
   /* background: rebeccapurple; */
-  padding: 1rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
   /* grid stuff */
-  display: grid;
+  /* display: grid;
   grid-template-columns: 2.5rem 1fr 2.5rem;
   justify-items: center;
   align-items: start;
   grid-template-areas: 
     "hmbg title lang"
-    ". call ."
+    ". call ." */
 }
 
 .SideBarTrigger {
@@ -28,7 +30,8 @@
   grid-area: title;
 }
 .CallMeNow {
-  grid-area: call;
+  /* grid-area: call; */
+  margin-bottom: 0.5rem;
   
 }
 
