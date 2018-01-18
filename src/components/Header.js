@@ -25,16 +25,19 @@ const SiteTitle = (props) => {
   const towingMsg = props.langKey === "en" ? 'Need a tow? Call Now!' : 'נתקעת עם הרכב? צריך שירותי גרירה? התקשרו עכשיו';
 
   return (
-    <div className={styles.SiteTitle}>
-      <Link to={`/${props.langKey}`} style={{ textDecoration: 'none', color: '#FAFAFA' }}>
-        <h1>
-          {styledTitle}
-        </h1>
-        <p>
-          {serviceArea}
-        </p>
-        {/* <p style={{fontSize:'0.7rem'}}>{towingMsg}</p> */}
-      </Link>
+    <div>
+      <div className={styles.SiteTitle}>
+        <Link to={`/${props.langKey}`} style={{ textDecoration: 'none', color: '#FAFAFA' }}>
+          <h1>
+            {styledTitle}
+          </h1>
+          <p>
+            {serviceArea}
+          </p>
+          {/* <p style={{fontSize:'0.7rem'}}>{towingMsg}</p> */}
+        </Link>
+      </div>
+      <CallMeNow langKey={props.langKey} />
     </div>
   );
 }
@@ -45,7 +48,7 @@ const CallMeNow = (props) => {
   const callMe = props.langKey === "en" ? 'Need a tow? Call Now!' : 'צריך גרירה? תתקשר';
   return (
     <div className={styles.CallMeNow} >
-      <p style={{textAlign: 'center'}}>{callMe}</p>
+      <p style={{ textAlign: 'center' }}>{callMe}</p>
       <PhoneButton customId="mobile-call" />
     </div>
   )
@@ -61,9 +64,6 @@ const Header = (props) => {
         <SideBarTrigger clicked={props.sideBarTriggerClicked} />
         <SiteTitle title={props.title} langKey={props.langKey} />
         <SelectLanguage langs={props.langs} className={styles.SelectLanguage} langKey={props.langKey} />
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <CallMeNow langKey={props.langKey} />
       </div>
     </div>
   )
