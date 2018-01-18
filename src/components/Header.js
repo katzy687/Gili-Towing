@@ -10,7 +10,7 @@ import PhoneButton from './PhoneButton';
 const SideBarTrigger = (props) => (
   <div className={styles.SideBarTrigger}
     onClick={props.clicked}
-    style={{ cursor: 'pointer'}}
+    style={{ cursor: 'pointer' }}
   >
     <MdMenuIcon />
   </div>
@@ -28,12 +28,12 @@ const SiteTitle = (props) => {
     <div className={styles.SiteTitle}>
       <Link to={`/${props.langKey}`} style={{ textDecoration: 'none', color: '#FAFAFA' }}>
         <h1>
-          {styledTitle}		 
+          {styledTitle}
         </h1>
         <p>
-          {serviceArea}		   
+          {serviceArea}
         </p>
-			{/* <p style={{fontSize:'0.7rem'}}>{towingMsg}</p> */}
+        {/* <p style={{fontSize:'0.7rem'}}>{towingMsg}</p> */}
       </Link>
     </div>
   );
@@ -45,7 +45,7 @@ const CallMeNow = (props) => {
   const callMe = props.langKey === "en" ? 'Need a tow? Call Now!' : 'צריך גרירה? תתקשר';
   return (
     <div className={styles.CallMeNow} >
-      <p>{callMe}</p>
+      <p style={{textAlign: 'center'}}>{callMe}</p>
       <PhoneButton customId="mobile-call" />
     </div>
   )
@@ -56,11 +56,13 @@ const CallMeNow = (props) => {
 const Header = (props) => {
   console.log('headerprops', props);
   return (
-    <div style={{ background:  '#fda000', width: '100vw' }} >
+    <div style={{ background: '#fda000', width: '100vw' }} >
       <div className={styles.HeaderContainer} >
         <SideBarTrigger clicked={props.sideBarTriggerClicked} />
-        <SelectLanguage langs={props.langs} className={styles.SelectLanguage} langKey={props.langKey} />
         <SiteTitle title={props.title} langKey={props.langKey} />
+        <SelectLanguage langs={props.langs} className={styles.SelectLanguage} langKey={props.langKey} />
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
         <CallMeNow langKey={props.langKey} />
       </div>
     </div>

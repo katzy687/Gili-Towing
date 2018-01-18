@@ -5,6 +5,7 @@
   margin: 0;
   font-family: monospace;
   direction: ltr;
+  padding: 0 1rem;
 }
 
 .Phone span {
