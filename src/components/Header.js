@@ -53,7 +53,7 @@ const CallMeNow = (props) => {
         <p style={{ textAlign: 'center', fontSize: '1.2rem' }}>{callMe}</p>
         <PhoneButton customId="mobile-call" />
       </div>
-      <RoadSideSign langKey={props.langKey}/>
+      <RoadSideSign langKey={props.langKey} />
     </div>
   )
 }
@@ -66,9 +66,13 @@ const Header = (props) => {
     <div style={{ background: '#fda000', width: '100vw' }} >
       <div className={styles.HeaderContainer} >
         <SideBarTrigger clicked={props.sideBarTriggerClicked} />
-        <BatterySign langKey={props.langKey} />
+        <div className={styles.topRowSigns}>
+          <BatterySign langKey={props.langKey}  />
+        </div>
         <SiteTitle title={props.title} langKey={props.langKey} />
-        <RoadSideSign langKey={props.langKey} />
+        <div className={styles.topRowSigns}>
+          <RoadSideSign langKey={props.langKey}  />
+        </div>
         <SelectLanguage langs={props.langs} className={styles.SelectLanguage} langKey={props.langKey} />
       </div>
       <CallMeNow langKey={props.langKey} />

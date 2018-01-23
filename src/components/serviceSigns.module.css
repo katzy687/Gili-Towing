@@ -2,8 +2,10 @@
   align-self: center;
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .batterySign p, .roadSideSign p {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 0;
 }

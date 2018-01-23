@@ -16,7 +16,6 @@ export const BatterySign = (props) => {
 
 export const RoadSideSign = (props) => {
   const roadSideSign = props.langKey === "en" ? 'Roadside Assistance' : 'חילוצי שטח';
-
   return (
     <div className={[styles.roadSideSign, 'animated', 'tada', 'infinite'].join(' ')}>
       <FaStarO />
