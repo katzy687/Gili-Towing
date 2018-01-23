@@ -6,9 +6,9 @@ import PhoneButton from '../components/PhoneButton';
 
 export const CardList =(props) => {
 
-  const cards = props.cards.map((card, index) => {
+  const cards = props.cards.map((card, index, cardsArray) => {
     const cardHeader = card.header ? <h2>{card.header}</h2> : null;
-    const phone = index === 2 ? <PhoneButton /> : null;
+    const phone = index === cardsArray.length-1 ? <PhoneButton /> : null;
 
     return(
       <li key={index} className={styles.card} >
