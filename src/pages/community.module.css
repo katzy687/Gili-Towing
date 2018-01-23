@@ -1,0 +1,15 @@
+.cardContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fafafa;
+  color: #424242;
+  margin-bottom: 1.5rem;
+  border-radius: 3px;
+}
+
+.content {
+  padding: 1rem;
+}

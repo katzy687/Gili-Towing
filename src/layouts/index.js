@@ -11,6 +11,8 @@ import Sidebar from 'react-sidebar';
 import SideBarContent from '../components/SideBarContent';
 import Footer from '../components/Footer';
 
+import woodBG from '../assets/wood-bg-Optimized.jpg';
+
 class TemplateWrapper extends Component {
   // props are data, location, i18nMessages, children
   constructor(props) {
@@ -69,10 +71,10 @@ class TemplateWrapper extends Component {
             sidebarClassName={styles.sideBar}
             contentClassName={styles.sideBarContent}
             onSetOpen={this.onSetSidebarOpen}
-            styles={{ overflow: 'hidden' }}
+            styles={{ overflowX: 'hidden' }}
           >
             <Header langs={langsMenu} title={langTitle} langKey={langKey} sideBarTriggerClicked={this.openSideBar} />
-            <div style={{ maxWidth: 1300, background: '#9E9E9E', padding: '1rem 0 1rem 0', margin: '0 auto' }}>
+            <div style={{ background: `url(${woodBG})`, padding: '1rem 0 1rem 0', margin: '0 auto' }}>
               <div
                 dir={langDirection}
                 style={{

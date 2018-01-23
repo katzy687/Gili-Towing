@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import {CardList} from './community.en';
+import {heCards} from '../data/community';
 
 const CommunityPage = () => (
   <div>
-    <h1>Hi from the battery page</h1>
-    <Link to="/he/">Go back to the homepage</Link>
+    <CardList cards={heCards} />
   </div>
 )
 

@@ -5,6 +5,10 @@
   margin: auto;
 }
 
+.Description, .MapTracker, .Services, .Carousel {
+  border-radius: 3px;
+}
+
 .navContainer ul {
   display: flex;
   height: 12vh;
@@ -18,7 +22,7 @@
 .navContainer ul li {
   border: solid black 2px;
   background: #1E88E5;
-  color: white;
+  color: #FAFAFA;
   padding: 0;
   margin: auto;
   width: 33.333%;
@@ -56,7 +60,7 @@
 
 .MapTracker p {
   padding: 0.5rem;
-  color: white;
+  color: #FAFAFA;
   margin: 0;
 }
 
@@ -80,7 +84,7 @@
 }
 
 .serviceTitle {
-  border: solid 1px black;
+  border: solid 1px rgb(31, 6, 6);
   padding: 0.5rem;
   margin-bottom: 0.7rem;
   /* font-weight: 600; */
@@ -88,9 +92,14 @@
 }
 
 .Services {
+	overflow-y: auto;
   background: white;
   padding: 1rem;
   margin-top: 1rem;
+}
+
+.rotated {
+  transform: rotateX(180deg);
 }
 
 @media only screen and (min-width: 768px) {
@@ -136,5 +145,6 @@
 
   .Description {
     grid-area: desc;
+    margin-top: 0;
   }
 }
