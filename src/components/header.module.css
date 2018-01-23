@@ -33,6 +33,9 @@
 .CallMeNow {
   /* grid-area: call; */
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  /* font-size: 1.5rem; */
   
 }
 
@@ -40,7 +43,7 @@
 .CallMeNow p {
   margin: 0;
   color: #FAFAFA;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 
@@ -80,6 +83,10 @@
   font-style: italic;
 }
 
+.topRowSigns {
+  display: none;
+  margin-top: 10px;
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -89,5 +96,9 @@
 
   .CallMeNow {
     display: none;
+  }
+
+  .topRowSigns {
+    display: block;
   }
 }

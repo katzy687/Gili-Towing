@@ -43,7 +43,7 @@ const styles = {
 const fbStyle = {
 	height:'150px',
 	width:'150px',
-	padding:'5',
+	padding: '5',
 	margin:'5'
 }
 const footerLinkStyles = {

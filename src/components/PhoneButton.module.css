@@ -1,11 +1,11 @@
 .Phone {
   background: #4CAF50;
-  border-radius: 5px;
+  border-radius: 50%;
   /* width: 30%; */
   margin: 0;
   font-family: monospace;
   direction: ltr;
-  padding: 0 1rem;
+  padding: 1.8rem 1rem;
 }
 
 .Phone span {

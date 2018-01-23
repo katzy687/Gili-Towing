@@ -1,0 +1,11 @@
+.batterySign, .roadSideSign {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.batterySign p, .roadSideSign p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}

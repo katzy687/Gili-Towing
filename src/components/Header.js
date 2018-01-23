@@ -4,6 +4,7 @@ import SelectLanguage from './SelectLanguage';
 import styles from './header.module.css';
 import MdMenuIcon from 'react-icons/lib/md/menu';
 import PhoneButton from './PhoneButton';
+import { BatterySign, RoadSideSign } from './serviceSigns';
 
 // import woodBG from '../assets/wood-bg.jpg';
 
@@ -37,7 +38,6 @@ const SiteTitle = (props) => {
           {/* <p style={{fontSize:'0.7rem'}}>{towingMsg}</p> */}
         </Link>
       </div>
-      <CallMeNow langKey={props.langKey} />
     </div>
   );
 }
@@ -47,9 +47,13 @@ const SiteTitle = (props) => {
 const CallMeNow = (props) => {
   const callMe = props.langKey === "en" ? 'Need a tow? Call Now!' : 'צריך גרירה? תתקשר';
   return (
-    <div className={styles.CallMeNow} >
-      <p style={{ textAlign: 'center' }}>{callMe}</p>
-      <PhoneButton customId="mobile-call" />
+    <div className={styles.CallMeNow}>
+      <BatterySign langKey={props.langKey} />
+      <div  >
+        <p style={{ textAlign: 'center', fontSize: '1.2rem' }}>{callMe}</p>
+        <PhoneButton customId="mobile-call" />
+      </div>
+      <RoadSideSign langKey={props.langKey} />
     </div>
   )
 }
@@ -62,9 +66,16 @@ const Header = (props) => {
     <div style={{ background: '#fda000', width: '100vw' }} >
       <div className={styles.HeaderContainer} >
         <SideBarTrigger clicked={props.sideBarTriggerClicked} />
+        <div className={styles.topRowSigns}>
+          <BatterySign langKey={props.langKey}  />
+        </div>
         <SiteTitle title={props.title} langKey={props.langKey} />
+        <div className={styles.topRowSigns}>
+          <RoadSideSign langKey={props.langKey}  />
+        </div>
         <SelectLanguage langs={props.langs} className={styles.SelectLanguage} langKey={props.langKey} />
       </div>
+      <CallMeNow langKey={props.langKey} />
     </div>
   )
 }
