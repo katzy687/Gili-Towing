@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import FaFacebookOfficial from 'react-icons/lib/fa/facebook-official';
 import PhoneButton from './PhoneButton';
 
 const Footer = (props) => {
@@ -21,6 +22,7 @@ const Footer = (props) => {
       <p>ניתן גם להשיג אותי במייל <a style={footerLinkStyles} href="">GiliTowing@gmail.com</a></p>
       <p>או לחלופין בפלאפון</p>
       <PhoneButton />
+	  <a href="https://www.facebook.com/GRARGILI/" target="_blank"><FaFacebookOfficial style={fbStyle} /></a>
     </div>
   );
 
@@ -38,7 +40,12 @@ const styles = {
   padding: '1.5rem',
   width: '100vw'
 }
-
+const fbStyle = {
+	height:'150px',
+	width:'150px',
+	padding:'5',
+	margin:'5'
+}
 const footerLinkStyles = {
   // color: '#4FC3F7',
   textDecoration: 'underline'
