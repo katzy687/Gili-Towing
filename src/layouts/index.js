@@ -57,11 +57,14 @@ class TemplateWrapper extends Component {
       >
         <div>
           <Helmet
-            title="Gili's Towing 24/7"
+            title="גרר גילי - שירותי רכב וחילוצים 24/7 בתל אביב ואזור המרכז"
             meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
-              { name: 'keywords', content: 'Gili-towing, 24/7, ' }
+              { name: 'description', content: 'חילוץ וסיוע בדרכים, למצבי חירום, גרירה, אחסון רכבים, מכירה והתקנה של מצברי רכב ומשאיות, וטיפול בתקלות רכב דו גלגלי בתל אביב ואזור המרכז 24/7, 7 ימים בשבוע' },
+              { name: 'keywords', content: 'Emergency roadside assistance, towing, car storage and car batteries for car, truck and motorcycle breakdowns in Tel Aviv and Central Israel 24 hours a day, 7 days a week (24/7)' },
+              { name: 'og:title', content: 'גרר גילי - שירותי רכב וחילוצים 24/7' },
+              { name: 'og:description', content: 'חילוץ וסיוע בדרכים, למצבי חירום, גרירה, אחסון רכבים, מכירה והתקנה של מצברי רכב ומשאיות, וטיפול בתקלות רכב דו גלגלי בתל אביב ואזור המרכז 24/7, 7 ימים בשבוע' },
+              { name: 'og:image', content: 'https://scontent.ftlv2-1.fna.fbcdn.net/v/t1.0-9/1915364_906954752757495_3731075909287235474_n.jpg?oh=b35e087bb966d1111a5b5b61417c6fca&oe=5ADA6088' },
+              { name: 'og:url', content: 'http://grargilitelaviv.co.il/' },
             ]}
           />
           <Sidebar sidebar={<SideBarContent langKey={langKey} closeHandler={this.closeSideBar}/>}
