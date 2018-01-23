@@ -21,9 +21,14 @@ import MdArrowUp from 'react-icons/lib/md/keyboard-arrow-up';
 import toolIcon from '../assets/tools-30px.png';
 import SVG from 'react-inlinesvg';
 
+// Scroll shit
+// import { Element } from 'react-scroll';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 //data 
 import { enTowingServices, enRoadSide, enOtherServices } from '../data/services';
 import GiliGlympse from '../components/GiliGlympse';
+import { BatterySign } from '../components/serviceSigns';
 console.log(enTowingServices);
 
 export const MainSlider = () => (
@@ -87,19 +92,21 @@ class ServiceContainer extends Component {
     // const arrowIcon = !this.state.isOpened ? <MdArrowDown /> : <MdArrowUp />;
     const rotatedClass = !this.state.isOpened ? '' : styles.rotated;
     return (
-      <div>
-        <h5 onClick={this.toggleOnClick} className={styles.serviceTitle} style={{ display: 'flex', alignItems: 'center' }}>
-          <div className={rotatedClass} style={{ width: '1.5rem', margin: '0 0.7rem', transition: 'all linear 0.2s'}}>
-            <img  style={{ marginBottom: 0, display: 'block'}} src={toolIcon} alt="tool icon" />
+        // <ScrollAnimation animateIn="fadeIn">
+          <div className="animated shake" style={{ animationIterationCount: '5'}}>
+            <h5 onClick={this.toggleOnClick} className={styles.serviceTitle} style={{ display: 'flex', alignItems: 'center' }}>
+              <div className={rotatedClass} style={{ width: '1.5rem', margin: '0 0.7rem', transition: 'all linear 0.2s'}}>
+                <img  style={{ marginBottom: 0, display: 'block'}} src={toolIcon} alt="tool icon" />
+              </div>
+              <div>
+                {this.props.serviceTitle}
+              </div>
+            </h5>
+            <SmoothCollapse expanded={this.state.isOpened}>
+              <p>{this.props.serviceDescription}</p>
+            </SmoothCollapse>
           </div>
-          <div>
-            {this.props.serviceTitle}
-          </div>
-        </h5>
-        <SmoothCollapse expanded={this.state.isOpened}>
-          <p>{this.props.serviceDescription}</p>
-        </SmoothCollapse>
-      </div>
+        //  </ScrollAnimation> 
     )
   }
 }

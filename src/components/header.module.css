@@ -39,16 +39,6 @@
   
 }
 
-.batterySign, .roadSideSign {
-  align-self: center;
-  display: flex;
-  align-items: center;
-}
-
-.batterySign p, .roadSideSign p {
-  font-size: 2rem;
-}
-
 
 .CallMeNow p {
   margin: 0;

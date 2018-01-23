@@ -3,8 +3,8 @@ import Link from 'gatsby-link'
 import SelectLanguage from './SelectLanguage';
 import styles from './header.module.css';
 import MdMenuIcon from 'react-icons/lib/md/menu';
-import FaStarO from 'react-icons/lib/fa/star-o';
 import PhoneButton from './PhoneButton';
+import { BatterySign, RoadSideSign } from './serviceSigns';
 
 // import woodBG from '../assets/wood-bg.jpg';
 
@@ -46,24 +46,14 @@ const SiteTitle = (props) => {
 // location needs to be made dynamic
 const CallMeNow = (props) => {
   const callMe = props.langKey === "en" ? 'Need a tow? Call Now!' : 'צריך גרירה? תתקשר';
-  const batterySign = props.langKey === "en" ? 'Batteries' : 'מצברים';
-  const roadSideSign = props.langKey === "en" ? 'Roadside Assistance' : 'חילוצי שטח';
   return (
     <div className={styles.CallMeNow}>
-      <div className={[styles.batterySign, 'animated', 'tada', 'infinite'].join(' ')}>
-        <FaStarO />
-        <p>{batterySign}</p>
-        <FaStarO/>
-      </div>
+      <BatterySign langKey={props.langKey} />
       <div  >
         <p style={{ textAlign: 'center', fontSize: '1.2rem' }}>{callMe}</p>
         <PhoneButton customId="mobile-call" />
       </div>
-      <div className={[styles.roadSideSign, 'animated', 'tada', 'infinite'].join(' ')}>
-        <FaStarO />
-        <p>{roadSideSign}</p>
-        <FaStarO />
-      </div>
+      <RoadSideSign langKey={props.langKey}/>
     </div>
   )
 }
@@ -76,7 +66,9 @@ const Header = (props) => {
     <div style={{ background: '#fda000', width: '100vw' }} >
       <div className={styles.HeaderContainer} >
         <SideBarTrigger clicked={props.sideBarTriggerClicked} />
+        <BatterySign langKey={props.langKey} />
         <SiteTitle title={props.title} langKey={props.langKey} />
+        <RoadSideSign langKey={props.langKey} />
         <SelectLanguage langs={props.langs} className={styles.SelectLanguage} langKey={props.langKey} />
       </div>
       <CallMeNow langKey={props.langKey} />
