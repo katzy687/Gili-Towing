@@ -37,7 +37,6 @@ const SiteTitle = (props) => {
           {/* <p style={{fontSize:'0.7rem'}}>{towingMsg}</p> */}
         </Link>
       </div>
-      <CallMeNow langKey={props.langKey} />
     </div>
   );
 }
@@ -46,10 +45,20 @@ const SiteTitle = (props) => {
 // location needs to be made dynamic
 const CallMeNow = (props) => {
   const callMe = props.langKey === "en" ? 'Need a tow? Call Now!' : 'צריך גרירה? תתקשר';
+  const batterySign = props.langKey === "en" ? 'Batteries' : 'מצברים';
+  const roadSideSign = props.langKey === "en" ? 'Roadside Assistance' : 'חילוצי שטח';
   return (
-    <div className={styles.CallMeNow} >
-      <p style={{ textAlign: 'center' }}>{callMe}</p>
-      <PhoneButton customId="mobile-call" />
+    <div className={styles.CallMeNow}>
+      <div>
+        <p>{batterySign}</p>
+      </div>
+      <div  >
+        <p style={{ textAlign: 'center' }}>{callMe}</p>
+        <PhoneButton customId="mobile-call" />
+      </div>
+      <div>
+        <p>{roadSideSign}</p>
+      </div>
     </div>
   )
 }
@@ -65,6 +74,7 @@ const Header = (props) => {
         <SiteTitle title={props.title} langKey={props.langKey} />
         <SelectLanguage langs={props.langs} className={styles.SelectLanguage} langKey={props.langKey} />
       </div>
+      <CallMeNow langKey={props.langKey} />
     </div>
   )
 }
