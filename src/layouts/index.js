@@ -6,6 +6,7 @@ import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider } from 'react-intl';
 import 'intl';
 import './index.css';
+import 'animate.css';
 import styles from './index.module.css';
 import Sidebar from 'react-sidebar';
 import SideBarContent from '../components/SideBarContent';
@@ -60,7 +61,7 @@ class TemplateWrapper extends Component {
             meta={[
               { name: 'description', content: 'Sample' },
               { name: 'keywords', content: 'sample, something' },
-              { name: 'keywords', content: 'Gili-towing, 24/7, ' },
+              { name: 'keywords', content: 'Gili-towing, 24/7, ' }
             ]}
           />
           <Sidebar sidebar={<SideBarContent langKey={langKey} closeHandler={this.closeSideBar}/>}

@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import SelectLanguage from './SelectLanguage';
 import styles from './header.module.css';
 import MdMenuIcon from 'react-icons/lib/md/menu';
+import FaStarO from 'react-icons/lib/fa/star-o';
 import PhoneButton from './PhoneButton';
 
 // import woodBG from '../assets/wood-bg.jpg';
@@ -49,15 +50,19 @@ const CallMeNow = (props) => {
   const roadSideSign = props.langKey === "en" ? 'Roadside Assistance' : 'חילוצי שטח';
   return (
     <div className={styles.CallMeNow}>
-      <div>
+      <div className={[styles.batterySign, 'animated', 'tada', 'infinite'].join(' ')}>
+        <FaStarO />
         <p>{batterySign}</p>
+        <FaStarO/>
       </div>
       <div  >
-        <p style={{ textAlign: 'center' }}>{callMe}</p>
+        <p style={{ textAlign: 'center', fontSize: '1.2rem' }}>{callMe}</p>
         <PhoneButton customId="mobile-call" />
       </div>
-      <div>
+      <div className={[styles.roadSideSign, 'animated', 'tada', 'infinite'].join(' ')}>
+        <FaStarO />
         <p>{roadSideSign}</p>
+        <FaStarO />
       </div>
     </div>
   )
