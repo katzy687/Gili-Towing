@@ -85,6 +85,7 @@
 
 .topRowSigns {
   display: none;
+  margin-top: 10px;
 }
 
 @media only screen and (min-width: 768px) {
