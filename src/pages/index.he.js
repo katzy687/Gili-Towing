@@ -34,11 +34,11 @@ import MdArrowDown from 'react-icons/lib/md/keyboard-arrow-down';
 import MdArrowUp from 'react-icons/lib/md/keyboard-arrow-up';
 
 //data 
-import {heTowingServices, heRoadSide, heOtherServices} from '../data/services';
+import {heTowingServices, heRoadSide, heOtherServices, heGeneralServices} from '../data/services';
 
 const Description = () => (
   <section className={[styles.Description, 'white-card'].join(' ')} >
-    <p> היי, אני גילי ואני כאן כדי להציל את המצב אליו נקלעת! אני ממוקם בעיקר באזור תל אביב והמרכז, אך בתיאום מראש אוכל להגיע לכל נקודה בארץ, בכל שעות היממה 24/7 ולתת עזרה מכל סוג בדרכים ובשטח בכל מזג אויר
+    <p> היי, אני גילי ואני כאן כדי להציל את המצב אליו נקלעת! אני ממוקם בעיקר באזור תל אביב והמרכז, אך בתיאום מראש אוכל להגיע לכל נקודה בארץ, בכל שעות היממה 24/7 בכל מזג אויר ולתת עזרה מכל סוג בדרכים ובשטח 
     </p>    
     {/* desktop view */}
     <p className={styles.checkMap} >תוכל גם לבדוק את המפה שבהמשך כדי לראות את המיקום שלי</p>
@@ -50,6 +50,7 @@ const Description = () => (
 const Services = () => (
   <section className={styles.Services} >
     <h1>שרותים</h1>
+	<ServiceList serviceArr={heGeneralServices} />
     <h3>גרירה:</h3>
     <ServiceList serviceArr={heTowingServices} />
 
