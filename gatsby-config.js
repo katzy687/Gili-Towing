@@ -40,6 +40,14 @@ module.exports = {
           windows: false
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-113015132-1",
+        // Setting this parameter is optional
+        anonymize: false
+      }
     }
   ]
 }

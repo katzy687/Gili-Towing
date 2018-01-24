@@ -93,10 +93,10 @@ class ServiceContainer extends Component {
     const rotatedClass = !this.state.isOpened ? '' : styles.rotated;
     return (
         // <ScrollAnimation animateIn="fadeIn">
-          <div className="animated shake" style={{ animationIterationCount: '5'}}>
+          <div style={{ animationIterationCount: '5'}}>
             <h5 onClick={this.toggleOnClick} className={styles.serviceTitle} style={{ display: 'flex', alignItems: 'center' }}>
               <div className={rotatedClass} style={{ width: '1.5rem', margin: '0 0.7rem', transition: 'all linear 0.2s'}}>
-                <img  style={{ marginBottom: 0, display: 'block'}} src={toolIcon} alt="tool icon" />
+                <img className="animated tada infinite" style={{ marginBottom: 0, display: 'block'}} src={toolIcon} alt="tool icon" />
               </div>
               <div>
                 {this.props.serviceTitle}
