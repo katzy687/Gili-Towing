@@ -24,12 +24,15 @@
   padding: 0.5rem;
   font-size: 2rem;
 }
+
 .SelectLanguage {
   grid-area: lang;
 }
+
 .HeaderContent {
   grid-area: title;
 }
+
 .CallMeNow {
   /* grid-area: call; */
   margin-bottom: 0.5rem;
@@ -38,7 +41,12 @@
   justify-content: center;
   align-items: center;
   /* font-size: 1.5rem; */
-  
+}
+
+.CrazySigns {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
 }
 
 
@@ -65,14 +73,12 @@
 
 .Gili {
   font-style: italic;
-  
 }
 
 .CallToAction {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .CallToAction>p {
@@ -102,5 +108,9 @@
 
   .topRowSigns {
     display: block;
+  }
+
+  .CrazySigns {
+    display: none;
   }
 }

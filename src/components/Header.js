@@ -56,7 +56,7 @@ const CallMeNow = (props) => {
 
 const CrazySigns = (props) => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '1rem' }}>
+    <div className={styles.CrazySigns}>
       <BatterySign langKey={props.langKey} />
       <RoadSideSign langKey={props.langKey} />
     </div>
