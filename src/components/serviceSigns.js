@@ -3,7 +3,7 @@ import FaStarO from 'react-icons/lib/fa/star-o';
 import styles from './serviceSigns.module.css';
 
 const CrazyStar = () => (
-  <FaStarO className={['animated', 'tada', 'infinite'].join(' ')}/>
+  <FaStarO style={{ fontSize: '1.8rem'}} className={['animated', 'tada', 'infinite'].join(' ')}/>
 )
 
 export const BatterySign = (props) => {

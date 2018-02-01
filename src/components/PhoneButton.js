@@ -3,7 +3,7 @@ import FaPhone from 'react-icons/lib/fa/phone';
 import styles from './PhoneButton.module.css';
 
 const PhoneButton = (props) => {
-  const gilisNumber = '+972 (52) 420-7470';
+  const gilisNumber = '(052) 420-7470';
   return (
     <button id={props.customId} className={styles.Phone} style={props.customStyle} >
       <FaPhone />

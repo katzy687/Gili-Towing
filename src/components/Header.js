@@ -48,11 +48,16 @@ const CallMeNow = (props) => {
   const callMe = props.langKey === "en" ? 'Need a tow? Call Now!' : 'צריך גרירה? תתקשר';
   return (
     <div className={styles.CallMeNow}>
+      <p style={{ textAlign: 'center', fontSize: '1.2rem' }}>{callMe}</p>
+      <PhoneButton customId="mobile-call" />
+    </div>
+  )
+}
+
+const CrazySigns = (props) => {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '1rem' }}>
       <BatterySign langKey={props.langKey} />
-      <div  >
-        <p style={{ textAlign: 'center', fontSize: '1.2rem' }}>{callMe}</p>
-        <PhoneButton customId="mobile-call" />
-      </div>
       <RoadSideSign langKey={props.langKey} />
     </div>
   )
@@ -63,18 +68,19 @@ const CallMeNow = (props) => {
 const Header = (props) => {
   console.log('headerprops', props);
   return (
-    <div style={{ background: '#fda000', width: '100vw' }} >
+    <div style={{ background: '#fda000', width: '100vw', paddingBottom: '0.3rem' }} >
       <div className={styles.HeaderContainer} >
         <SideBarTrigger clicked={props.sideBarTriggerClicked} />
         <div className={styles.topRowSigns}>
-          <BatterySign langKey={props.langKey}  />
+          <BatterySign langKey={props.langKey} />
         </div>
         <SiteTitle title={props.title} langKey={props.langKey} />
         <div className={styles.topRowSigns}>
-          <RoadSideSign langKey={props.langKey}  />
+          <RoadSideSign langKey={props.langKey} />
         </div>
         <SelectLanguage langs={props.langs} className={styles.SelectLanguage} langKey={props.langKey} />
       </div>
+      <CrazySigns langKey={props.langKey} />
       <CallMeNow langKey={props.langKey} />
     </div>
   )

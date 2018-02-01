@@ -34,7 +34,9 @@
   /* grid-area: call; */
   margin-bottom: 0.5rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /* font-size: 1.5rem; */
   
 }
